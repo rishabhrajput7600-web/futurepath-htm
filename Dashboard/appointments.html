@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Appointments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/bootstrap_custom.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/appointments.css">
+    <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <title>Document</title>
+    <style></style>
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <div class="logo_name">
+                <img src="images/logo.png" alt="" srcset="">
+            </div>
+            <div class="sidebar_btn" id="btn">
+                <img src="images/sidebar_icon.svg" alt="" srcset="">
+            </div>
+        </div>
+        <ul class="nav-list">
+            <li class="active">
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Messages</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">File Manager</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section doctor_list_section user-management-list">
+        <div class="topbar">
+            <div class="sidebar_btn" id="btn">
+                <img src="images/sidebar_icon.svg" alt="" srcset="">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="right-section">
+                <!-- Notification -->
+                <div class="icon-btn dropdown">
+                    <div class="bell_img">
+                        <img src="images/bell_icon.svg" alt="" srcset="">
+                    </div>
+                    <div class="dropdown-menu">
+                        <p>No
+                            <span class="visit-type"> New</span> notifications
+                        </p>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-menu dropdown">
+                    <img src="images/username_img.png" alt="User" class="avatar">
+                    <span class="username">Sachin</span>
+                    <span class="arrow">
+                        <img src="images/down_arrow.svg" alt="" srcset="">
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home_section_box doctor-list appointments-list">
+            <div class="doctor_list_top">
+                <div class="doctor_list_row">
+                    <div class="doctor_list_left">
+                        <div class="doctor_list_contnet">
+                            <h1>Appointments</h1>
+                        </div>
+                    </div>
+                    <div class="doctor_list_right">
+                        <div class="doctor_list_search">
+                            <div class="search_box">
+                                <form action="/action_page.php">
+                                    <button type="submit">
+                                        <img src="images/search_icon.png" alt="" srcset="">
+                                    </button>
+                                    <input type="text" placeholder="Search by name, contact, city" name="search">
+                                </form>
+                            </div>
+                            <div class="doctor_list_dropdown">
+                                <div class="card_top_select">
+                                    <div class="custom-select-wrapper">
+                                        <button class="custom-select-btn countryBtn countryBtn_top" id="countryBtn">
+                                            Sort By
+                                            <span class="caret"></span>
+                                        </button>
+                                        <div class="dropdown">
+                                            <div class="dropdown-menu countryBtn_top_dropdown">
+                                                <h3> Sort By</h3>
+                                                <div class="dropdown-item selected">Sort By : A-Z</div>
+                                                <div class="dropdown-item">Sort By : Z-A</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter_box">
+                                <button type="button" class="btn btn-primary">
+                                    <span class="filter_content">Filter</span>
+                                    <span class="filter_icon">
+                                        <img src="images/filter_icon.svg" alt="" srcset="">
+                                    </span>
+                                </button>
+                                <div class="filter_form">
+                                    <div class="filter_top">
+                                        <h3>Filter</h3>
+                                    </div>
+                                    <form>
+                                        <div class="input-box">
+                                            <select name="" id="">
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-box">
+                                            <select name="" id="">
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-box">
+                                            <select name="" id="">
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-box">
+                                            <select name="" id="">
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                                <option value="">Select Specialisation</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-btn">
+                                            <button class="apply_btn">Apply</button>
+                                            <button class="clear_btn">Clear</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card_button">
+                                <button>
+                                    <span class="add_content">Add Doctor</span>
+                                    <span class="add_icon">
+                                        <img src="images/add_icon.png" alt="" srcset="">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="date_section">
+                <div class="month-display" id="monthDisplay">Loading...</div>
+                <div class="date_box">
+                    <div class="slider-container">
+                        <div class="slider_arrow" onclick="scrollByOne(-1)">&#8249;</div>
+                        <div class="date-slider" id="dateSlider"></div>
+                        <div class="slider_arrow" onclick="scrollByOne(1)">&#8250;</div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead class="sticky">
+                            <tr>
+                                <th>Appointment ID</th>
+                                <th>Patient Name</th>
+                                <th>Date & Time</th>
+                                <th>Appointment Type</th>
+                                <th>Appointment Status</th>
+                                <th>Visit Type</th>
+                                <th>Payment Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/date-icon.png" alt="">
+                                        <span class="appointment-status appointment-scheduled">Scheduled</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type"> New</span>
+                                </td>
+                                <td>
+                                    <span class="payment-paid payment-status">Paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-walk">
+                                        <img src="images/walk-icon.svg" alt="">
+                                        Walk in
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/date-icon.png" alt="">
+                                        <span class="appointment-status appointment-scheduled">Scheduled</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type"> New</span>
+                                </td>
+                                <td>
+                                    <span class="payment-paid payment-status">Paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-walk">
+                                        <img src="images/walk-icon.svg" alt="">
+                                        Walk in
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/mark.svg" alt="">
+                                        <span class="appointment-status appointment-completed">Completed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type">Follow Up</span>
+                                </td>
+                                <td>
+                                    <span class="payment-paid payment-status">Paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/date-icon.png" alt="">
+                                        <span class="appointment-status appointment-scheduled">Scheduled</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type"> New</span>
+                                </td>
+                                <td>
+                                    <span class="payment-paid payment-status">Paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/cancel.svg" alt="">
+                                        <span class="appointment-status appointment-canceled">Canceled</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type">Follow Up</span>
+                                </td>
+                                <td>
+                                    <span class="payment-free payment-status">Free</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/reschedule.svg" alt="">
+                                        <span class="appointment-status appointment-rescheduled">Rescheduled</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type">Follow Up</span>
+                                </td>
+                                <td>
+                                    <span class="payment-free payment-status">Free</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-walk">
+                                        <img src="images/walk-icon.svg" alt="">
+                                        Walk in
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/mark.svg" alt="">
+                                        <span class="appointment-status appointment-completed">Completed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type"> New</span>
+                                </td>
+                                <td>
+                                    <span class="payment-paid payment-status">Paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/mark.svg" alt="">
+                                        <span class="appointment-status appointment-completed">Completed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type">Follow Up</span>
+                                </td>
+                                <td>
+                                    <span class="payment-free payment-status">Free</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/mark.svg" alt="">
+                                        <span class="appointment-status appointment-completed">Completed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type"> New</span>
+                                </td>
+                                <td>
+                                    <span class="payment-paid payment-status">Paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>387462138</td>
+                                <td>Arjun Verma</td>
+                                <td>
+                                    22/09/2025
+                                    <br>
+                                    9:00 AM
+                                </td>
+                                <td>
+                                    <div class="appointment-type appointment-online">
+                                        <img src="images/profile_icon_red.svg" alt="">
+                                        Online
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="appointment-status-icon">
+                                        <img src="images/appointments-img/cancel.svg" alt="">
+                                        <span class="appointment-status appointment-canceled">Canceled</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="visit-type"> New</span>
+                                </td>
+                                <td>
+                                    <span class="payment-unpaid payment-status">Unpaid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt="">
+                                                    Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt="">
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination_box">
+                    <div class="pagination_left">
+                        <div class="pagination_content">Showing 1 to 5 of 20 results</div>
+                    </div>
+                    <div class="pagination_right">
+                        <div class="doctor_list_pagination">
+                            <div class="pagination">
+                                <a href="#">Previous</a>
+                                <a href="#">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(".filter_box .btn-primary").click(function() {
+            $(".filter_form").toggleClass("active");
+        });
+        const dateSlider = document.getElementById("dateSlider");
+        const monthDisplay = document.getElementById("monthDisplay");
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const months = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        const dateCards = [];
+        // Start from November 1st, 2025 and go till January 31st, 2026
+        const startDate = new Date('2025-11-01');
+        const endDate = new Date('2026-01-31');
+        const totalDays = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+        let activeIndex = 0;
+        for (let i = 0; i <= totalDays; i++) {
+            const date = new Date(startDate.getTime() + i * 24 * 60 * 60 * 1000);
+            const dayName = days[date.getDay()];
+            const dateNum = date.getDate();
+            const dateStr = date.toISOString();
+            const div = document.createElement("div");
+            div.className = "date";
+            if (i === 0) div.classList.add("active");
+            div.setAttribute("data-date", dateStr);
+            div.setAttribute("data-index", i);
+            div.innerHTML = `<div class="day">${dayName}</div><div class="number">${dateNum}</div>`;
+            div.addEventListener("click", () => {
+                updateActiveCard(i);
+                scrollToCard(i);
+            });
+            dateSlider.appendChild(div);
+            dateCards.push(div);
+        }
+
+        function updateMonthDisplay(index) {
+            const card = dateCards[index];
+            const dateStr = card.getAttribute("data-date");
+            const date = new Date(dateStr);
+            const month = months[date.getMonth()];
+            const year = date.getFullYear();
+            monthDisplay.textContent = `${month} ${year}`;
+        }
+
+        function updateActiveCard(index) {
+            dateCards.forEach(card => card.classList.remove("active"));
+            if (dateCards[index]) {
+                dateCards[index].classList.add("active");
+                activeIndex = index;
+                updateMonthDisplay(index);
+            }
+        }
+
+        function scrollToCard(index) {
+            const card = dateCards[index];
+            const cardOffsetLeft = card.offsetLeft;
+            const sliderWidth = dateSlider.clientWidth;
+            const cardWidth = card.offsetWidth;
+            const scrollPosition = cardOffsetLeft - (sliderWidth / 2) + (cardWidth / 2);
+            dateSlider.scrollTo({
+                left: scrollPosition,
+                behavior: "smooth"
+            });
+        }
+
+        function scrollByOne(direction) {
+            const newIndex = activeIndex + direction;
+            if (newIndex >= 0 && newIndex < dateCards.length) {
+                updateActiveCard(newIndex);
+                scrollToCard(newIndex);
+            }
+        }
+        // Initial setup
+        updateMonthDisplay(activeIndex);
+        scrollToCard(activeIndex);
+        // Detect scroll end and update active
+        let scrollTimeout;
+        dateSlider.addEventListener("scroll", () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const sliderCenter = dateSlider.scrollLeft + dateSlider.offsetWidth / 2;
+                let closestIndex = 0;
+                let minDistance = Infinity;
+                dateCards.forEach((card, index) => {
+                    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                    const distance = Math.abs(cardCenter - sliderCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+                updateActiveCard(closestIndex);
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

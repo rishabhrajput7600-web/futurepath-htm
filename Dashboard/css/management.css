@@ -1,0 +1,191 @@
+.create-user-management .contact-fome {
+    background: #fff;
+    margin-top: 33px;
+}
+ .create-user-management .contact-fome h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000;
+    font-weight: 400;
+}
+.upload_file {
+    position: relative;
+}
+.upload_file::before{
+      content: '';
+    background: url(../images/upload_icon.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 1;
+    transform: translatey(-50%);
+}
+.upload_file .form-control {
+    padding-left: 63px;
+    color: #000000;
+}
+.save-btn_box {
+    width: 100%;
+    text-align: right;
+}
+.save-btn_box .save-btn {
+    padding: 10px 20px;
+}
+
+   @media (max-width: 767px) {
+.save-btn_box {
+    width: 100%;
+    text-align: center;
+}
+.registration_section .input_deta {
+    margin-bottom: 15px;
+}
+   }
+
+
+     .management_user_detail .card_button button .add_icon{
+      width: 25px;
+    }
+.management_user_detail .doctor_registration_box .card.card_button {
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.management_user_detail .doctor_registration_box .card.card_button button{
+  line-height: normal;
+}
+.management_user_detail .doctor_registration_box .card.card_button button:last-child {
+    background: #fff;
+    border-color: #C81212;
+    color: #C81212;;
+}
+.management_user_detail .doctor_registration_box .card.card_button button {
+    line-height: normal;
+    align-items: center;
+}
+
+.management_user_detail .user_profile_row {
+       display: flex;
+    gap: 80px;
+    margin-top: 30px;
+    padding-bottom: 24px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.10);
+    align-items: center;
+}
+
+.user_profile_right ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px 70px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0px;
+}
+    .user_profile_right ul h4 {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.user_profile_right ul p {
+    color: rgba(0, 0, 0, 0.60);
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+ .permission-container {
+        max-width: 100%;
+    width: 100%;
+    padding-top: 24px;
+    }
+
+    .permission-container h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .permissions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .permission-tag {
+      padding: 8px 16px;
+      border-radius: 10px;
+      background: #d5f5ee; /* default soft green */
+      color: #027a63;
+      font-size: 16px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: transform 0.2s ease;
+    }
+
+    .permission-tag:hover {
+      transform: scale(1.05);
+    }
+
+    /* Different pastel variants */
+    .tag-green {
+      background: #d5f5ee;
+      color: #027a63;
+    }
+
+    .tag-yellow {
+      background: #fdf4db;
+      color: #a37601;
+    }
+
+    .tag-purple {
+      background: #f0e4fa;
+      color: #5b2da3;
+    }
+    .management_user_detail .user_profile_img {
+    width: 123px;
+    height: 123px;
+}
+.management_user_detail .user_profile_img img {
+    width: 100%;
+}
+
+
+   @media (max-width: 1199px) {
+    .management_user_detail .doctor_registration_box .card.card_button {
+    justify-content: flex-end;
+}
+.user_profile_right ul {
+     gap: 24px 56px;
+         justify-content: start;
+}
+   }
+   @media (max-width: 991px) {
+       .user_profile_right ul {
+        gap: 24px 49px;
+        justify-content: start;
+    }
+    .management_user_detail .user_profile_row {
+      gap: 60px;
+    }
+}
+
+   @media (max-width: 767px) {
+     .management_user_detail .user_profile_row {
+         flex-direction: column;
+            justify-content: center;
+       
+    }
+    .user_profile_right ul{
+       gap: 24px 20px;
+       justify-content: flex-start;
+    }
+   }

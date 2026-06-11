@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctors Hub Specialist Clinic</title>
+  <style>
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    a.back {
+      display: inline-block;
+      color: #0252a9;
+      text-decoration: none;
+      margin: 20px 30px;
+      font-size: 14px;
+    }
+    a.back:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    th,
+    td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    .header-table td {
+      /* border-bottom: 1px solid #ddd; */
+      padding: 20px 30px;
+    }
+
+    .clinic-title {
+      color: #0252a9;
+      font-size: 36px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    .clinic-sub {
+      color: #666;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .doctor-info {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+      text-align: right;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px 30px;
+      border-bottom: 1px solid #ddd;
+      background: #fafafa;
+    }
+
+    .info-table {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    .info-table td {
+      padding: 8px 30px;
+    }
+
+    .summary-row td {
+      padding: 10px 30px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .follow-up {
+      border-left: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .follow-up h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .follow-up p {
+      margin: 5px 0;
+      font-size: 13px;
+    }
+
+    .prescription-title {
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .prescription-title::before {
+      content: "℞";
+      color: #0252a9;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .prescription-table {
+      width: 94%;
+      margin: 0 auto 30px;
+      border-collapse: collapse;
+    }
+
+    .prescription-table th {
+      background: #f1f5f9;
+      font-weight: 600;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .prescription-table td {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    /* .logo {
+      width: 60px;
+      height: 60px;
+    } */
+   .header-table ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header-table ul li .clinic-sub {
+     display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.header-table ul li .clinic-sub .clinic-sub_icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+        align-items: center;
+    justify-content: center;
+}
+.header-table ul .clinic-sub_content {
+    width: 90%;
+}
+
+    /* ✅ Responsive Styling */
+    @media (max-width: 768px) {
+      .clinic-title {
+        font-size: 20px;
+      }
+      .doctor-info {
+        text-align: left;
+        padding-top: 10px;
+      }
+      .header-table td {
+        display: block;
+        width: 100%;
+      }
+      .info-table td {
+        display: block;
+        width: 100%;
+        padding: 5px 20px;
+      }
+      .follow-up {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+      .prescription-table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+      }
+      .prescription-title {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      th, td {
+        font-size: 13px;
+      }
+      .section-title {
+        padding: 8px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .clinic-title {
+        font-size: 18px;
+      }
+      .clinic-sub {
+        font-size: 12px;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+      .prescription-title::before {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="back">← Back</a>
+
+  <div class="container">
+    <!-- Header -->
+    <table class="header-table">
+      <tr>
+        <td>
+          <table>
+            <tr>
+              
+              <td>
+                 <img
+                  src="images/logo.svg"
+                  class="logo"
+                  alt="Logo"
+                />
+                <div class="clinic-title">Doctors Hub Specialist Clinic</div>
+             <ul>
+              <li>
+                   <div class="clinic-sub">
+                  <div class="clinic-sub_icon">📞 </div>
+                  <div class="clinic-sub_content">
+                    123-A, Geeta Colony, Malviya Nagar, Delhi, New Delhi
+                  </div>
+                </div>
+              
+              </li>
+              <li>  
+                 <div class="clinic-sub">
+<div class="clinic-sub_icon">📞 </div>
+                  <div class="clinic-sub_content">+91 8847374833</div>
+                 </div>
+                  
+                </li>
+             </ul>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="doctor-info" style="width:30%;">
+          <strong>Doctor ID:</strong> DOC001<br />
+          <strong>Name:</strong> Dr. Mohit Singh<br />
+          <strong>Speciality:</strong> Cardiology
+        </td>
+      </tr>
+    </table>
+
+    <!-- Patient Info -->
+    <div class="section-title">Patient Information</div>
+    <table class="info-table">
+      <tr>
+        <td><strong>Patient ID:</strong> PAT001</td>
+        <td><strong>Name:</strong> SACHIN</td>
+        <td><strong>Visit Date:</strong> 2024-03-15</td>
+        <td><strong>Appointment ID:</strong> APP001</td>
+      </tr>
+      <tr>
+        <td><strong>Age:</strong> 35</td>
+        <td><strong>Gender:</strong> Female</td>
+        <td><strong>Blood Group:</strong> O+</td>
+        <td rowspan="2" class="follow-up">
+          <h4>Follow Up Date</h4>
+          <p>22-Sep-2025</p>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Appointment Summary -->
+    <div class="section-title">Appointment Summary</div>
+    <table class="info-table summary-row">
+      <tr>
+        <td>
+          Patient presented with mild fever, body ache, and fatigue. No signs of
+          infection. Vitals stable. Suspected viral flu.
+        </td>
+      </tr>
+    </table>
+
+    <!-- Prescription -->
+    <div class="prescription-title">Prescription</div>
+    <table class="prescription-table">
+      <thead>
+        <tr>
+          <th>Medicine</th>
+          <th>Dosage</th>
+          <th>Duration</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paracetamol 500 mg</td>
+          <td>Before Breakfast, Before Lunch, Before Dinner</td>
+          <td>7 Days</td>
+          <td>Take with water, monitor temp</td>
+        </tr>
+        <tr>
+          <td>Cetirizine 10 mg</td>
+          <td>After Dinner</td>
+          <td>5 Days</td>
+          <td>For allergy relief, may cause drowsiness</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

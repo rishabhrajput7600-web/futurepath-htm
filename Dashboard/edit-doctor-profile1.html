@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Edit Doctor Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/clinic-details.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/form.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+  <title>Document</title>
+  <style>
+    .upload_photo_box .upload_photo {
+      padding: 0px;
+    }
+
+
+    .edit_doctor_profile .registration_section .appointment_screen h3 {
+      margin-bottom: 15px;
+    }
+
+    .edit_doctor_profile .contact-fome h5 {
+      margin-bottom: 16px;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .edit_doctor_profile .save-btn_box {
+      margin-top: 34px;
+    }
+    .time_table_section .appointment_interval_screen {
+    margin-top: 0px;
+}
+.time_table_section .time-table {
+    box-shadow: none;
+}
+.time_table_section .time-table
+ {
+    box-shadow: none;
+    margin-bottom: 44px;
+}
+.time_table_section .time-table tr, .time_table_section .time-table td  {
+    border: none;
+    border-color: transparent !important;
+}
+
+    .time-table {
+      width: 100%;
+      max-width: 1200%;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .time-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .time-table thead {
+      background: #e8eff8;
+    }
+
+    .time-table th {
+      text-align: left;
+      padding: 15px;
+      font-weight: 600;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .time-table td {
+      padding: 12px 15px;
+      border-top: 1px solid #eef1f5;
+      background: #fff;
+    }
+
+    /* .time-table select,
+    .time-table input[type="time"] {
+      padding: 8px 10px;
+      border: 1px solid #d0d7e3;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #fff;
+      outline: none;
+    } */
+    
+    .time-table input[type="time"] {
+      padding: 8px 10px;
+      border: 1px solid #d0d7e3;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #fff;
+      outline: none;
+    }
+
+    .time-table .time-range {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .time-table .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .time-table .add-btn {
+      background: #0252A9;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+      cursor: pointer;
+      float: inline-end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .time-table .icon-btn {
+      border: none;
+      cursor: pointer;
+      background: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .time-table .icon-btn.delete {
+      background: #ffe9e9;
+      color: #ff4b4b;
+    }
+
+    .time-table .icon-btn.edit {
+      background: #eaf3ff;
+      color: #0252A9;
+    }
+
+    .time-table .icon-btn.save {
+      background: #e9f9ec;
+      color: #1fb66f;
+    }
+
+    .time-table .icon-btn:hover {
+      opacity: 0.9;
+    }
+
+    .time-table .form-control {
+      margin-top: 0;
+    }
+
+    .time-table .add-btn:hover {
+      border: none;
+    }
+
+    .time-table .actions,
+    .time-table .icon-btn.delete,
+    .time-table .icon-btn.edit {
+      box-shadow: none;
+      border: none;
+      margin-top: 7px;
+    }
+    .time_table_section .select-box select {
+    background-color: #F3F5F7;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+}
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section create-user-management">
+    <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_section_box management_user_detail edit_doctor_profile">
+
+      <ul class="breadcrumb">
+        <li>Doctor Profile</li>
+        <li><a href="#">Edit Doctor Profile</a></li>
+      </ul>
+
+      <!-- <div class="doctor_list_top">
+        <div class="doctor_list_row">
+          <div class="doctor_list_left">
+            <div class="doctor_list_contnet">
+              <h1>Doctor Profile</h1>
+            </div>
+          </div>
+          
+        </div>
+      </div> -->
+
+      <div class="doctor_registration_box">
+        <h1>Edit Doctor Profile</h1>
+      </div>
+
+      <section class="registration_section">
+        <div class="contact-fome">
+          <h3>Basic Details</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Doctor Name *</h3>
+                <input id="content-" class="form-control" type="text" placeholder="First Name">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Contact Number *</h3>
+                <input class="form-control" type="text " placeholder="Enter phone number">
+
+              </div>
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Gender *</h3>
+
+                <div class="select-box">
+                  <select class="form-control" name="" id="">
+                    <option value="">Select gender</option>
+                    <option value="">Select gender</option>
+                    <option value="">Select gender</option>
+                    <option value="">Select gender</option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Email ID *</h3>
+                <input class="form-control" type="text " placeholder="Enter email address">
+
+              </div>
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Date of Birth *</h3>
+                <input class="form-control" type="date" placeholder="dd-mm-yy">
+
+              </div>
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Address *</h3>
+                <input class="form-control" type="text " placeholder="Enter Address">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>State</h3>
+                <div class="select-box">
+                  <select class="form-control" name="" id="">
+                    <option value="">Select state</option>
+                    <option value="">Select state</option>
+                    <option value="">Select state</option>
+                    <option value="">Select state</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>City *</h3>
+                <div class="select-box">
+                  <select class="form-control" name="" id="">
+                    <option value="">Select state</option>
+                    <option value="">Select state</option>
+                    <option value="">Select state</option>
+                    <option value="">Select state</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Pincode *</h3>
+                <input class="form-control" type="text " placeholder="Enter Pincode">
+
+              </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+              <div class="profile-photo upload_photo_box">
+                <h3>Profile Photon</h3>
+                <div class="profile_row">
+                  <div class="profile_left">
+                    <div class="upload_photo ">
+                      <img src="images/anjali-sharma.png" alt="Anjali Sharma">
+                    </div>
+                  </div>
+                  <div class="profile_right">
+                    <!-- <input type="file" id="myfile" name="myfile"> -->
+                    <div class="upload-btn-wrapper">
+                      <button class="btn"><span><img src="images/upload_icon.png" alt="" srcset=""></span>
+                        Upload a file</button>
+                      <input type="file" name="myfile">
+                    </div>
+                    <span>Recommended: Square image, max 2MB</span>
+                  </div>
+                </div>
+                <p>* Required fields</p>
+              </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-lg-4 col-md-6 col-sm-12">
+              <div class="profile-photo">
+                <h3>Upload QR</h3>
+                <div class="profile_row">
+                  <div class="profile_left">
+                    <div class="upload_photo">
+                      <img src="images/qr-cod.png" alt="" srcset="">
+                    </div>
+                  </div>
+                  <div class="profile_right">
+                    <!-- <input type="file" id="myfile" name="myfile"> -->
+                    <div class="upload-btn-wrapper">
+                      <button class="btn"><span><img src="images/upload_icon.png" alt="" srcset=""></span>Upload a
+                        file</button>
+                      <input type="file" name="myfile">
+                    </div>
+                    <span>Recommended: Square image, max 2MB</span>
+                  </div>
+                </div>
+                <p>* Required fields</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- <div class="pagination registration_pagination">
+  <a href="#"><span><img src="images/prev.png" alt="" srcset=""></span> Prev</a>
+  <a class="active" href="#">Next <span><img src="images/next.png" alt="" srcset=""></span></a>
+</div> -->
+      </section>
+
+      <section class="registration_section">
+
+        <div class="contact-fome">
+          <h3>Professional Details </h3>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h4>Degree Details</h4>
+            </div>
+
+          </div>
+
+          <div class="multisteps-form__form degree_box">
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <div class="input_deta">
+                  <h3>Medical Degree *</h3>
+                  <input id="content-" class="form-control" type="text" placeholder="MBBS">
+
+                </div>
+
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <div class="input_deta">
+                  <h3>University *</h3>
+                  <input id="content-" class="form-control" type="text" placeholder="Northbridge Medical University">
+
+                </div>
+
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <div class="input_deta">
+                  <h3>Institute Passed year *</h3>
+                  <input id="content-" class="form-control" type="text" placeholder="2024">
+
+                </div>
+
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <div class="input_deta">
+                  <h3>Practice Started year *</h3>
+                  <input id="content-" class="form-control" type="text" placeholder="2026">
+
+                </div>
+
+              </div>
+
+              <div class="col-md-12 col-sm-12">
+                <div class="add-btn">
+                  <button><span><i class="fa fa-plus"></i></span> Add Doctor Qualification</button>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-sm-12 col-lg-6">
+                <div class="mbbs_card">
+                  <div class="card-left">
+                    <div class="degree">MBBS</div>
+                    <div class="university">Northbridge Medical University</div>
+                  </div>
+
+                  <div class="card-right">
+                    <div class="year-block">
+                      <div class="year-title">Passed year</div>
+                      <div class="year">2024</div>
+                    </div>
+                    <div class="year-block">
+                      <div class="year-title">Practice Started year</div>
+                      <div class="year">2026</div>
+                    </div>
+
+                  </div>
+                  <div class="close-btn">×</div>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-6">
+                <div class="mbbs_card">
+                  <div class="card-left">
+                    <div class="degree">MBBS</div>
+                    <div class="university">Northbridge Medical University</div>
+                  </div>
+
+                  <div class="card-right">
+                    <div class="year-block">
+                      <div class="year-title">Passed year</div>
+                      <div class="year">2024</div>
+                    </div>
+                    <div class="year-block">
+                      <div class="year-title">Practice Started year</div>
+                      <div class="year">2026</div>
+                    </div>
+
+                  </div>
+                  <div class="close-btn">×</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="select_box">
+                <label for="specialisation">Specialisation <span>*</span></label>
+
+                <!-- <div class="dropdown" id="specialisationDropdown">
+  <div class="dropdown-toggle" onclick="toggleDropdown()">Select Specialisation</div>
+  <div class="dropdown-menu">
+    <input type="text" placeholder="Search specialisations..." onkeyup="filterOptions(this)">
+    <label><input type="checkbox" value="Psychiatry"> Psychiatry</label>
+    <label><input type="checkbox" value="Cardiology"> Cardiology</label>
+    <label><input type="checkbox" value="Dermatology"> Dermatology</label>
+    <label><input type="checkbox" value="Orthopedic"> Orthopedic</label>
+    <label><input type="checkbox" value="Pediatrics"> Pediatrics</label>
+    <label><input type="checkbox" value="Gynecology"> Gynecology</label>
+    <label><input type="checkbox" value="Neurology"> Neurology</label>
+  </div>
+</div> -->
+
+                <div class="dropdown">
+                  <div class="dropdown-toggle">Select Specialisation</div>
+                  <div class="dropdown-menu">
+                    <input type="text" placeholder="Search specialisations..." class="filter-input">
+                    <label><input type="checkbox" value="Psychiatry"> Psychiatry</label>
+                    <label><input type="checkbox" value="Cardiology"> Cardiology</label>
+                    <label><input type="checkbox" value="Dermatology"> Dermatology</label>
+                    <label><input type="checkbox" value="Orthopedic"> Orthopedic</label>
+                    <label><input type="checkbox" value="Pediatrics"> Pediatrics</label>
+                    <label><input type="checkbox" value="Gynecology"> Gynecology</label>
+                    <label><input type="checkbox" value="Neurology"> Neurology</label>
+                  </div>
+                </div>
+
+                <div class="chips" id="chipContainer"></div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="select_box">
+                <label for="specialisation">Specialisation <span>*</span></label>
+                <div class="dropdown" id="specialisationDropdown">
+                  <div class="dropdown-toggle" onclick="toggleDropdown()">Select Specialisation</div>
+                  <div class="dropdown-menu">
+                    <input type="text" placeholder="Search specialisations..." onkeyup="filterOptions(this)">
+                    <label><input type="checkbox" value="Psychiatry"> Psychiatry</label>
+                    <label><input type="checkbox" value="Cardiology"> Cardiology</label>
+                    <label><input type="checkbox" value="Dermatology"> Dermatology</label>
+                    <label><input type="checkbox" value="Orthopedic"> Orthopedic</label>
+                    <label><input type="checkbox" value="Pediatrics"> Pediatrics</label>
+                    <label><input type="checkbox" value="Gynecology"> Gynecology</label>
+                    <label><input type="checkbox" value="Neurology"> Neurology</label>
+                  </div>
+                </div>
+
+                <div class="chips" id="chipContainer"></div>
+              </div>
+
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="select_box">
+
+                <div class="upload-container">
+                  <label class="label">Certification *</label>
+
+                  <div class="upload-input">
+                    <input type="text" placeholder="Enter Certification URL">
+                    <div class="upload-btn-wrapper">
+                      <button class="btn"><span><img src="images/upload_icon.png" alt="" srcset=""></span>Upload a
+                        file</button>
+                      <input type="file" name="myfile">
+                    </div>
+
+                  </div>
+
+                  <div class="tag">
+                    <span class="tag-icon">
+                      <img src="images/certified_icon.svg" alt="" srcset="">
+                    </span>
+                    Board Certified Cardiologist
+                    <a href="#">View</a>
+                    <span class="remove">✕</span>
+                  </div>
+
+                  <div class="tag">
+                    <span class="tag-icon">
+                      <img src="images/certified_icon.svg" alt="" srcset="">
+                    </span>
+                    Board Certified Cardiologist
+                    <a href="#">View</a>
+                    <span class="remove">✕</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="registration_section">
+
+        <div class="contact-fome">
+          <h3>Consultation Hours</h3>
+
+          <h5>Appointment Interval </h5>
+          <div class="appointment_screen">
+            <div class="input_deta">
+              <h3>Day *</h3>
+              <div class="select-menu">
+                <div class="select-btn">
+                  <span class="sBtn-text">Select day</span>
+                  <i class="bx bx-chevron-down"></i>
+                </div>
+
+                <ul class="options">
+                  <li class="option">
+                    <span class="option-text">Monday</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Tuesday</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Wednesday</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Thursday</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Friday</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Saturday</span>
+                  </li>
+                  <li class="option">
+                    <span class="option-text">Sunday</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6 ">
+                <div class="starttime_box">
+                  <label for="startTime">First Half *</label>
+                  <div class="starttime">
+                    <div class="starttime_list">
+                      <label for="startTime">Start Time *</label>
+                      <div class="time_am">
+                        <input type="time" id="startTime" name="startTime" required="">
+                        <select name="startAmPm" id="startAmPm">
+                          <option value="AM">AM</option>
+                          <option value="PM">PM</option>
+                        </select>
+                      </div>
+
+                    </div>
+                    <div class="starttime_list">
+                      <label for="endTime">End Time *</label>
+                      <div class="time_am">
+                        <input type="time" id="endTime" name="endTime" required="">
+                        <select name="endAmPm" id="endAmPm">
+                          <option value="AM">AM</option>
+                          <option value="PM">PM</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6  ">
+                <div class="starttime_box">
+                  <label for="startTime">Second Half *</label>
+                  <div class="starttime">
+                    <div class="starttime_list">
+                      <label for="startTime">Start Time *</label>
+                      <div class="time_am">
+                        <input type="time" id="startTime" name="startTime" required="">
+                        <select name="startAmPm" id="startAmPm">
+                          <option value="AM">AM</option>
+                          <option value="PM">PM</option>
+                        </select>
+                      </div>
+
+                    </div>
+                    <div class="starttime_list">
+                      <label for="endTime">End Time *</label>
+                      <div class="time_am">
+                        <input type="time" id="endTime" name="endTime" required="">
+                        <select name="endAmPm" id="endAmPm">
+                          <option value="AM">AM</option>
+                          <option value="PM">PM</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 ">
+                <div class="time_btn">
+                  <button type="button"> <i class="fa fa-clock-o"></i> <span>Add Time</span></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+ </div>
+ </section>
+ <section class="registration_section time_table_section">
+                   
+                    <div class="contact-fome">
+
+          <div class="appointment_interval_screen">
+
+            <div class="time-table">
+              <table id="scheduleTable">
+                <thead>
+                  <tr>
+                    <th colspan="6">Day</th>
+                    <th>First Half Time</th>
+                    <th>Second Half Time</th>
+                    <th style="width: 80px;">
+                      <button class="add-btn" id="addRowBtn">+</button>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="6">
+                      <div class="select-box">
+                        <select class="form-control">
+                        <option>Select day</option>
+                        <option>Monday</option>
+                        <option>Tuesday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                        <option>Friday</option>
+                        <option>Saturday</option>
+                        <option>Sunday</option>
+                      </select>
+                      </div>
+                      
+                    </td>
+                    <td>
+                      <div class="time-range">
+                        <input class="form-control" placeholder="hh:mm"> – <input class="form-control"
+                          placeholder="hh:mm">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="time-range">
+                        <input class="form-control" placeholder="hh:mm"> – <input class="form-control"
+                          placeholder="hh:mm">
+                      </div>
+                    </td>
+                    <td class="actions">
+                      <button class="icon-btn delete">✕</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-4">
+                <div class="appointment_box">
+                  <h3>Appointment Interval </h3>
+                  <div class="select-menu">
+                    <div class="select-btn">
+                      <span class="sBtn-text">Select day</span>
+                      <i class="bx bx-chevron-down"></i>
+                    </div>
+
+                    <ul class="options">
+                      <li class="option">
+                        <span class="option-text">15 minutes</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">30 minutes</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">35 minutes</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">40 minutes</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">45 minutes</span>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <div class="appointment_box">
+                  <h3>Free Consulation Interval * </h3>
+                  <div class="select-menu">
+                    <div class="select-btn">
+                      <span class="sBtn-text">Select day</span>
+                      <i class="bx bx-chevron-down"></i>
+                    </div>
+
+                    <ul class="options">
+                      <li class="option">
+                        <span class="option-text">5 Days</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">7 Days</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">10 Days</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">15 Days</span>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <div class="appointment_box">
+                  <h3>Consultation Fee (₹) * </h3>
+                  <div class="input_deta">
+                    <input id="content-" class="form-control" type="text" placeholder="Enter Fee Amount">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="billing_box">
+            <h3>Billing Preferences</h3>
+
+            <ul>
+              <li>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">I need to generate reciept for consultations</label>
+              </li>
+              <li>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Bike">
+                <label for="vehicle2">I need to generate invoices for consultations</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="gst_box">
+            <h4>GST Number *</h4>
+            <div class="gst_input">
+              <input id="content-" class="form-control" type="text"
+                placeholder="Enter GST number (e.g., 22AAAAA0000A1Z5)">
+            </div>
+            <p>Required for invoice generation. Format: 22AAAAA0000A1Z5</p>
+
+            <div class="alert alert-danger" role="alert">
+              <strong> Note:</strong> If you choose to generate invoices, you'll need to provide a valid GST number.
+              This will enable proper tax calculations and compliance with Indian tax regulations.
+            </div>
+
+            <div class="required_cononet">
+              <p>* Required fields</p>
+            </div>
+          </div>
+
+       </div>
+       </section>
+
+      </section>
+
+      <div class="col-md-12 col-sm-12">
+
+        <div class="save-btn_box">
+          <div class="group-btn">
+            <button class="save-btn cancel_btn">Cancel</button>
+            <button class="save-btn">Save Changes</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

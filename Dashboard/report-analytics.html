@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Management List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+  <!-- <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="css/reports-and-analytics.css" rel="stylesheet" type="text/css"> -->
+  <title>Document</title>
+  <style>
+  
+    
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section doctor_list_section user-management-list reports-and-analytics">
+    <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section_box doctor-list">
+      <div class="doctor_list_top">
+        <div class="doctor_list_row">
+          <div class="doctor_list_left">
+            <div class="doctor_list_contnet">
+              <h1>Reports & Analytics</h1>
+              <p>Manage Reports & Analytics</p>
+            </div>
+          </div>
+          <div class="doctor_list_right">
+            <div class="doctor_list_search">
+
+              <div class="export_card export_card_btn">
+                <button>
+                  <span class="export">Export</span>
+                  <span class="export_icon">
+                    <img src="images/export-icon.png" alt="" srcset="">
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="reports_dashboard">
+        <!-- Card 1: Patients Consulted -->
+        <div class="card_box">
+          <!-- <div class="select-box">
+            
+                 <select class="form-control" name="" id="">
+                <option value="">Today</option>
+                <option value="">Today1</option>
+                <option value="">Today2</option>
+                <option value="">Today3</option>
+              </select>
+              
+            </div> -->
+
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Patients Consulted</h4>
+            </div>
+            <div class="subtitle">Last 4 Weeks</div>
+            <div class="total-box">
+              <div class="total-label">Total Weekly Patients</div>
+              <div class="total-value">2,342</div>
+            </div>
+            <div class="chart-box">
+              <canvas id="patientsChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: New vs Follow-up -->
+        <div class="card_box">
+          <div class="title-row">
+            <!-- <div class="custom-select">
+              <div class="select-btn" id="selectBtn">
+                Today
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+
+              <div class="options" id="optionsList">
+                <div class="option" data-value="Today">Today</div>
+                <div class="option" data-value="This Month">This Month</div>
+                <div class="option" data-value="Last Month">Last Month</div>
+                <div class="option">
+                  <input type="date" id="customDate">
+                </div>
+              </div>
+            </div> -->
+
+                  <div class="select-dropdown">
+		<button href="#" role="button" data-value="" class="select-dropdown__button"><span>SELECT ITEMS </span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+		</button>
+		<ul class="select-dropdown__list">
+			<li data-value="1" class="select-dropdown__list-item">Item 1</li>
+			<li data-value="2" class="select-dropdown__list-item">Item 2</li>
+			<li data-value="3" class="select-dropdown__list-item">Item 3</li>
+			<li data-value="4" class="select-dropdown__list-item"><button class="select-dropdown_date">custome Range</button> </li>
+		</ul>
+	</div>
+
+ 
+
+            <div class="date-range-box" id="dateRangeBox">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M4 5h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V7a2 2 0 012-2z" />
+              </svg>
+              <input id="daterange" placeholder="Select range" readonly />
+            </div>
+          </div>
+
+          <div class="card">
+
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>New vs Follow-up</h4>
+            </div>
+            <div class="subtitle">Patient type distribution</div>
+            <div class="chart-box">
+              <canvas id="donutChart"></canvas>
+            </div>
+            <div class="legend">
+              <span><i style="background:#0252A9"></i> New Patients: 936</span>
+              <span><i style="background:#1CC4B2"></i> Follow-up: 1406</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+          <div class="card">
+
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Age Distribution</h4>
+            </div>
+            <div class="subtitle">By age groups</div>
+            <div class="chart-box">
+              <canvas id="ageChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3: Age Distribution -->
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <!-- <div class="card-header">
+        <select class="dropdown">
+          <option>Today</option>
+          <option>This Week</option>
+          <option>This Month</option>
+        </select>
+      </div> -->
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Gender Distribution</h4>
+            </div>
+            <div class="subtitle">By gender</div>
+            <div class="chart-box">
+              <canvas id="genderChart"></canvas>
+            </div>
+            <div class="legend">
+              <span><i style="background:#0252A9"></i> Male: 1192</span>
+              <span><i style="background:#9b26b6"></i> Female: 1048</span>
+              <span><i style="background:#9ca3af"></i> Other: 102</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Appointments -->
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+
+<div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <!-- <div class="card-header">
+        <select class="dropdown">
+          <option>Today</option>
+          <option>This Week</option>
+          <option>This Month</option>
+        </select>
+      </div> -->
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Appointments</h4>
+            </div>
+            <div class="subtitle">Completed vs Cancelled</div>
+            <div class="appt-stats">
+              <div class="appt-box green">
+                <div class="label"><span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+  <g clip-path="url(#clip0_3017_12077)">
+    <path d="M8.88685 16.2957C12.9769 16.2957 16.2925 12.9801 16.2925 8.89005C16.2925 4.80001 12.9769 1.48438 8.88685 1.48438C4.79681 1.48438 1.48117 4.80001 1.48117 8.89005C1.48117 12.9801 4.79681 16.2957 8.88685 16.2957Z" stroke="#009966" stroke-width="1.48114" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.6651 8.88739L8.14624 10.3685L11.1085 7.40625" stroke="#009966" stroke-width="1.48114" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_3017_12077">
+      <rect width="17.7736" height="17.7736" fill="white"/>
+    </clipPath>
+  </defs>
+</svg></span> Completed</div>
+                <div class="value">2,342</div>
+              </div>
+              <div class="appt-box red">
+                <div class="label"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+  <path d="M16.2924 8.89005H14.4558C14.1321 8.88936 13.8171 8.9947 13.559 9.18996C13.3009 9.38522 13.1139 9.65965 13.0265 9.97128L11.2861 16.1624C11.2749 16.2009 11.2515 16.2347 11.2195 16.2587C11.1874 16.2827 11.1485 16.2957 11.1084 16.2957C11.0683 16.2957 11.0294 16.2827 10.9973 16.2587C10.9653 16.2347 10.9419 16.2009 10.9307 16.1624L6.84273 1.61768C6.83151 1.57922 6.80813 1.54544 6.77608 1.5214C6.74403 1.49737 6.70505 1.48438 6.66499 1.48438C6.62493 1.48438 6.58596 1.49737 6.55391 1.5214C6.52186 1.54544 6.49847 1.57922 6.48726 1.61768L4.74692 7.80882C4.65988 8.11924 4.47393 8.39277 4.21732 8.58791C3.9607 8.78305 3.64742 8.88913 3.32503 8.89005H1.48102" stroke="#E7000B" stroke-width="1.48114" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> Cancelled</div>
+                <div class="value">205</div>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="apptChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Peak Hours -->
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+
+          <!-- <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div> -->
+ 
+            <div class="date-picker-box">
+    <div class="date-input" id="calendarInput">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10m-11 8h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      <span id="selectedDate">Oct 23</span>
+    </div>
+  </div>
+
+          <div class="card">
+            <!-- <div class="card-header">
+        <select class="dropdown">
+          <option>Oct 23</option>
+          <option>Oct 24</option>
+          <option>Oct 25</option>
+        </select>
+      </div> -->
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Peak Hours</h4>
+            </div>
+            <div class="subtitle">Data for Thu, Oct 23, 2025</div>
+            <div class="peak-info">
+              <div class="peak-item">
+                <div class="peak-label">Peak Time</div>
+                <div class="peak-value">3 PM</div>
+              </div>
+              <div class="peak-item">
+                <div class="peak-label">Peak Count</div>
+                <div class="peak-value">138</div>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="peakChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Peak Hours</h4>
+            </div>
+            <p class="subtitle">Adherence rate</p>
+            <div class="metric">89% <span>(-2.2% from period start)</span></div>
+            <div class="chart-container">
+              <canvas id="adherenceChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Peak Hours</h4>
+            </div>
+            <p class="subtitle">Paid vs Free consultations</p>
+            <div class="info-box">
+              <div><strong>Total Visits</strong><br>2342</div>
+            </div>
+            <div class="chart-container">
+              <canvas id="visitChart"></canvas>
+            </div>
+            <div class="legend">
+              <span><i style="background:#10B981"></i> Paid Visits: 1832</span>
+              <span><i style="background:#CBD5E1"></i> Free Visits: 510</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_box">
+         
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Peak Hours</h4>
+            </div>
+            <p class="subtitle">Appointment slot efficiency</p>
+            <div style="display:flex;gap:10px;">
+              <div class="info-box" style="flex:1;background:#EDF3FF;">
+                <div><strong>Utilized</strong><br>2,380</div>
+              </div>
+              <div class="info-box" style="flex:1;">
+                <div><strong>Total</strong><br>2,800</div>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="slotChart"></canvas>
+            </div>
+            <div class="legend">
+              <span><i style="background:#004EEB"></i> Utilized: 85%</span>
+              <span><i style="background:#E0E6F7"></i> Unutilized: 15%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reports_dashboard_bottome">
+        <div class="card_box">
+          <!-- <div class="select-box">
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <!-- <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div> -->
+
+            
+          </div>
+
+          <div class="card">
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Peak Hours</h4>
+            </div>
+            <p class="subtitle">Distribution across payment methods</p>
+            <div class="total-box">
+              <strong>Total Revenue</strong>
+              <div class="total-amount">₹920,000</div>
+            </div>
+
+            <div>
+              <div class="payment-row">
+                <span>Cash</span>
+                <span>₹272,000</span>
+              </div>
+              <div class="bar-container">
+                <div class="bar cash"></div>
+              </div>
+
+              <div class="payment-row">
+                <span>Card</span>
+                <span>₹344,000</span>
+              </div>
+              <div class="bar-container">
+                <div class="bar card"></div>
+              </div>
+
+              <div class="payment-row">
+                <span>Online</span>
+                <span>₹304,000</span>
+              </div>
+              <div class="bar-container">
+                <div class="bar online"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_box">
+          <!-- <div class="select-box">
+            <select class="form-control" name="" id="">
+              <option value="">Today</option>
+              <option value="">Today1</option>
+              <option value="">Today2</option>
+              <option value="">Today3</option>
+            </select>
+
+          </div> -->
+          <div class="custom-select">
+            <div class="select-btn" id="selectBtn">
+              Today
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+
+            <div class="options" id="optionsList">
+              <div class="option" data-value="Today">Today</div>
+              <div class="option" data-value="This Month">This Month</div>
+              <div class="option" data-value="Last Month">Last Month</div>
+              <div class="option">
+                <input type="date" id="customDate">
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="title-row">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path
+                    d="M16.8567 22.122V20.015C16.8567 18.8973 16.4127 17.8254 15.6224 17.0351C14.8321 16.2448 13.7602 15.8008 12.6425 15.8008H6.32126C5.20359 15.8008 4.1317 16.2448 3.34139 17.0351C2.55108 17.8254 2.10709 18.8973 2.10709 20.015V22.122"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.8567 3.29297C17.7604 3.52724 18.5607 4.05496 19.132 4.79328C19.7034 5.5316 20.0133 6.43873 20.0133 7.37229C20.0133 8.30585 19.7034 9.21298 19.132 9.9513C18.5607 10.6896 17.7604 11.2173 16.8567 11.4516"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M23.178 22.1257V20.0186C23.1773 19.0849 22.8665 18.1778 22.2944 17.4399C21.7224 16.7019 20.9214 16.1748 20.0173 15.9414"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.48188 11.5885C11.8093 11.5885 13.6961 9.70176 13.6961 7.37433C13.6961 5.04691 11.8093 3.16016 9.48188 3.16016C7.15445 3.16016 5.2677 5.04691 5.2677 7.37433C5.2677 9.70176 7.15445 11.5885 9.48188 11.5885Z"
+                    stroke="#0252A9" stroke-width="2.10709" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h4>Peak Hours</h4>
+            </div>
+            <p class="subtitle">By service type</p>
+            <div class="chart-container">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $(".filter_box .btn-primary").click(function() {
+      $(".filter_form").toggleClass("active");
+    });
+    // Chart 1: Line Chart
+    new Chart(document.getElementById("patientsChart"), {
+      type: "line",
+      data: {
+        labels: ["08", "10", "12", "14", "16", "18", "20", "22"],
+        datasets: [{
+          data: [580, 600, 620, 610, 590, 580, 560, 540],
+          borderColor: "#0252A9",
+          borderWidth: 2,
+          fill: true,
+          backgroundColor: "rgba(2, 82, 169, 0.08)",
+          pointBackgroundColor: "#0252A9",
+          tension: 0.4,
+          pointRadius: 4,
+          pointHoverRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            titleFont: {
+              size: 13,
+              weight: "600"
+            },
+            bodyFont: {
+              size: 12
+            },
+            displayColors: false,
+            callbacks: {
+              title: (context) => `Time: ${context[0].label}:30`,
+              label: (context) => `Patients : ${context.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280",
+              font: {
+                size: 12
+              }
+            }
+          },
+          y: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280",
+              stepSize: 200,
+              font: {
+                size: 12
+              }
+            },
+            min: 0,
+            max: 800
+          }
+        }
+      }
+    });
+    // Chart 2: Donut Chart
+    new Chart(document.getElementById("donutChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["New Patients", "Follow-up"],
+        datasets: [{
+          data: [936, 1406],
+          backgroundColor: ["#0252A9", "#1CC4B2"],
+          borderWidth: 0,
+          cutout: "65%"
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: {
+              size: 12
+            },
+            callbacks: {
+              label: (context) => `${context.label}: ${context.parsed}`
+            }
+          }
+        }
+      }
+    });
+    
+    // Chart 3: Horizontal Bar Chart
+    new Chart(document.getElementById("ageChart"), {
+      type: "bar",
+      data: {
+        labels: ["0-18", "19-35", "36-50", "51-65", "65+"],
+        datasets: [{
+          data: [320, 720, 490, 410, 380],
+          backgroundColor: ["#cce1ff", "#7fb6ff", "#337fd9", "#4a97ff", "#0252A9"],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: {
+              size: 12
+            },
+            callbacks: {
+              title: (context) => `Age: ${context[0].label}`,
+              label: (context) => `Count: ${context.parsed.x}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280"
+            },
+            min: 0,
+            max: 1000
+          },
+          y: {
+            grid: {
+              display: false
+            },
+            ticks: {
+              color: "#6b7280"
+            }
+          }
+        }
+      }
+    });
+
+    
+    // Chart 1: Gender Distribution
+    new Chart(document.getElementById("genderChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Male", "Female", "Other"],
+        datasets: [{
+          data: [1192, 1048, 102],
+          backgroundColor: ["#0252A9", "#9b26b6", "#9ca3af"],
+          borderWidth: 0,
+          cutout: "65%"
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: {
+              size: 12
+            },
+            callbacks: {
+              label: (context) => `${context.label}: ${context.parsed}`
+            }
+          }
+        }
+      }
+    });
+    // Chart 2: Appointments (Dual Line Chart)
+    new Chart(document.getElementById("apptChart"), {
+      type: "line",
+      data: {
+        labels: ["08", "10", "12", "14", "16", "18", "20", "22"],
+        datasets: [{
+            label: "Completed",
+            data: [580, 600, 620, 610, 590, 580, 560, 540],
+            borderColor: "#1CC4B2",
+            backgroundColor: "rgba(28,196,178,0.1)",
+            tension: 0.4,
+            fill: true,
+            pointRadius: 3
+          },
+          {
+            label: "Cancelled",
+            data: [20, 25, 48, 30, 40, 35, 25, 20],
+            borderColor: "#E53935",
+            backgroundColor: "rgba(229,57,53,0.1)",
+            tension: 0.4,
+            fill: true,
+            pointRadius: 3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: {
+              size: 12
+            },
+            callbacks: {
+              title: (context) => `Time: ${context[0].label}:30`,
+              label: (context) =>
+                `${context.dataset.label}: ${context.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280",
+              font: {
+                size: 12
+              }
+            }
+          },
+          y: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280",
+              stepSize: 200,
+              font: {
+                size: 12
+              }
+            },
+            min: 0,
+            max: 800
+          }
+        }
+      }
+    });
+    // Chart 3: Peak Hours (Vertical Bar)
+    new Chart(document.getElementById("peakChart"), {
+      type: "bar",
+      data: {
+        labels: ["8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM"],
+        datasets: [{
+          label: "Peak Hours",
+          data: [40, 60, 90, 75, 110, 95, 85, 130, 138, 120, 100, 80],
+          backgroundColor: "#0252A9",
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: {
+              size: 12
+            },
+            callbacks: {
+              title: (context) => `Time: ${context[0].label}`,
+              label: (context) => `Count: ${context.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280",
+              font: {
+                size: 12
+              }
+            }
+          },
+          y: {
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              color: "#6b7280",
+              stepSize: 35,
+              font: {
+                size: 12
+              }
+            },
+            min: 0,
+            max: 140
+          }
+        }
+      }
+    });
+    // 1️⃣ Follow-up Line Chart
+    new Chart(document.getElementById("adherenceChart"), {
+      type: "line",
+      data: {
+        labels: ["08", "10", "12", "14", "16", "18", "20", "22"],
+        datasets: [{
+          label: "Rate",
+          data: [80, 72, 78, 65, 60, 63, 68, 75],
+          borderColor: "#E53935",
+          backgroundColor: "rgba(229,57,53,0.15)",
+          fill: true,
+          tension: 0.4,
+          pointRadius: 4,
+          pointBackgroundColor: "#E53935"
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              stepSize: 20
+            }
+          },
+          x: {
+            grid: {
+              color: "#eee"
+            }
+          }
+        }
+      }
+    });
+    // 2️⃣ Visit Types Donut
+    new Chart(document.getElementById("visitChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Paid Visits", "Free Visits"],
+        datasets: [{
+          data: [1832, 510],
+          backgroundColor: ["#10B981", "#CBD5E1"],
+          cutout: "70%"
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    });
+    // 3️⃣ Slot Utilization Donut with Center Text
+    const slotChart = new Chart(document.getElementById("slotChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Utilized", "Unutilized"],
+        datasets: [{
+          data: [85, 15],
+          backgroundColor: ["#004EEB", "#E0E6F7"],
+          cutout: "75%"
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: true
+          }
+        }
+      },
+      plugins: [{
+        id: 'centerText',
+        afterDraw: (chart) => {
+          const {
+            width,
+            height,
+            ctx
+          } = chart;
+          ctx.save();
+          ctx.font = 'bold 22px Inter';
+          ctx.fillStyle = '#111';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText('85%', width / 2, height / 2 - 5);
+          ctx.font = '14px Inter';
+          ctx.fillStyle = '#6c757d';
+          ctx.fillText('Used', width / 2, height / 2 + 15);
+          ctx.restore();
+        }
+      }]
+    });
+    const ctx = document.getElementById('revenueChart');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["08", "10", "12", "14", "16", "18", "20", "22"],
+        datasets: [{
+            label: "Consultation",
+            data: [72000, 76000, 82000, 81000, 79000, 77000, 76000, 74000],
+            borderColor: "#2563eb",
+            backgroundColor: "rgba(37,99,235,0.15)",
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0
+          },
+          {
+            label: "Follow-ups",
+            data: [48000, 52000, 54000, 53000, 52000, 51000, 50000, 48000],
+            borderColor: "#10b981",
+            backgroundColor: "rgba(16,185,129,0.15)",
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0
+          },
+          {
+            label: "Tests",
+            data: [26000, 27000, 29000, 31000, 30000, 29500, 28000, 27000],
+            borderColor: "#f87171",
+            backgroundColor: "rgba(248,113,113,0.15)",
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+              usePointStyle: true,
+              pointStyle: "circle"
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: {
+              color: "#e5e7eb"
+            },
+            ticks: {
+              callback: value => '₹' + value.toLocaleString()
+            }
+          },
+          x: {
+            grid: {
+              color: "#f3f4f6"
+            }
+          }
+        }
+      }
+    });
+    const selectBtn = document.getElementById("selectBtn");
+    const optionsList = document.getElementById("optionsList");
+    const customDate = document.getElementById("customDate");
+    selectBtn.addEventListener("click", () => {
+      optionsList.style.display =
+        optionsList.style.display === "flex" ? "none" : "flex";
+    });
+    document.querySelectorAll(".option[data-value]").forEach(option => {
+      option.addEventListener("click", () => {
+        selectBtn.firstChild.textContent = option.dataset.value;
+        optionsList.style.display = "none";
+      });
+    });
+    customDate.addEventListener("change", (e) => {
+      selectBtn.firstChild.textContent = e.target.value;
+      optionsList.style.display = "none";
+    });
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".custom-select")) {
+        optionsList.style.display = "none";
+      }
+    });
+    // ✅ Define all URLs first
+    const CSS_URL = "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css";
+    const THEME_URL = "https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css";
+    const JS_URL = "https://cdn.jsdelivr.net/npm/flatpickr";
+
+    function loadCSS(url) {
+      return new Promise((resolve, reject) => {
+        if (document.querySelector(`link[href="${url}"]`)) return resolve();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = url;
+        link.onload = () => resolve();
+        link.onerror = () => reject(new Error("CSS load failed: " + url));
+        document.head.appendChild(link);
+      });
+    }
+
+    function loadScript(url) {
+      return new Promise((resolve, reject) => {
+        if (window.flatpickr) return resolve(window.flatpickr);
+        const script = document.createElement("script");
+        script.src = url;
+        script.onload = () => resolve(window.flatpickr);
+        script.onerror = () => reject(new Error("Script load failed: " + url));
+        document.head.appendChild(script);
+      });
+    }
+    async function ensureFlatpickr() {
+        await loadCSS(CSS_URL);
+        await loadCSS(THEME_URL);
+        return await loadScript(JS_URL);
+      }
+      (async () => {
+        try {
+          const fp = await ensureFlatpickr();
+          fp("#daterange", {
+            mode: "range",
+            dateFormat: "d M, Y",
+            defaultDate: ["2025-10-02", "2025-10-27"],
+            showMonths: 2,
+            locale: {
+              rangeSeparator: " – "
+            }
+          });
+          // open calendar when clicking the box
+          const box = document.getElementById("dateRangeBox");
+          const input = document.getElementById("daterange");
+          box.addEventListener("click", () =>
+            input._flatpickr ? input._flatpickr.open() : input.click()
+          );
+        } catch (err) {
+          console.error("Flatpickr load error:", err);
+        }
+      })();
+
+
+      $('.select-dropdown__button').on('click', function(){
+	$('.select-dropdown__list').toggleClass('active');
+});
+$('.select-dropdown__list-item').on('click', function(){
+	var itemValue = $(this).data('value');
+	console.log(itemValue);
+	$('.select-dropdown__button span').text($(this).text()).parent().attr('data-value', itemValue);
+	$('.select-dropdown__list').toggleClass('active');
+});
+
+  //  $(".select-dropdown_date").click(function(){
+  // $(".select-dropdown__button").toggleClass("active");
+  // });
+//   $('.select-dropdown_date').on('click', function() {
+//   $(this).toggleClass('active');
+// });
+
+// document.querySelector('.select-dropdown_date').addEventListener('click', function() {
+//   const target = document.querySelector('.custom-range-box');
+//   target.classList.toggle('active'); // class add/remove karega
+// });
+
+document.querySelector('.select-dropdown_date').addEventListener('click', function() {
+  document.querySelector('.date-range-box').classList.toggle('active');
+});
+document.querySelectorAll('.select-dropdown__list > li:not(:last-child)').forEach(item => { 
+  item.addEventListener('click', function() {
+  document.querySelector('.date-range-box').classList.remove('active');
+});
+});
+
+//  const dateDisplay = document.getElementById('selectedDate');
+//     const inputBox = document.getElementById('calendarInput');
+
+//     flatpickr(inputBox, {
+//       defaultDate: "2025-10-23",
+//       dateFormat: "M d",
+//       inline: false,
+//       onChange: function(selectedDates, dateStr) {
+//         dateDisplay.textContent = dateStr;
+//       }
+//     });
+
+  const dateDisplay = document.getElementById('selectedDate');
+    const inputBox = document.getElementById('calendarInput');
+
+    // Initialize flatpickr safely
+    flatpickr(inputBox, {
+      defaultDate: "2025-10-23",
+      dateFormat: "M d",
+      inline: false,
+      onChange: function (selectedDates, dateStr) {
+        dateDisplay.textContent = dateStr;
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1270 @@
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.breadcrumb {
+    margin-bottom: 0px;
+}
+.breadcrumb li + li:before {
+    padding: 8px;
+    content: " ";
+    content: "\f054";
+    font-size: 12px;
+    font-family: "FontAwesome";
+}
+
+.breadcrumb li {
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+}
+.breadcrumb li a {
+    text-decoration: none;
+    color: #0252a9;
+    font-weight: 400;
+}
+.contact-fome h3 {
+    margin-bottom: 45px;
+    font-size: 26px;
+    color: #000;
+    font-weight: 400;
+}
+.doctor_registration_box {
+    margin-top: 41px;
+}
+.doctor_registration_box p {
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+}
+
+.contact-fome .doctor_registration_box {
+    margin-top: 0px;
+}
+.contact-fome {
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--White-shades-white-100, #fff);
+    padding: 32px 24px;
+}
+
+.profile_row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.profile_right span {
+    display: block;
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+}
+.profile-photo p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    margin-top: 24px;
+}
+.profile-photo h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.upload-btn-wrapper .btn {
+    border: 1px solid #0252a9;
+    color: #0252a9;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 16px;
+    display: flex;
+    cursor: pointer;
+}
+
+.upload-btn-wrapper input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.upload-btn-wrapper .btn span {
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.registration_pagination {
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.registration_pagination .active,
+.multisteps-form__form button.js-btn-next {
+    color: #fff;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    background: #0252a9;
+}
+.multisteps-form__form button:hover {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.multisteps-form__form button.js-btn-prev {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.multisteps-form__form button.js-btn-prev:hover {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.multisteps-form__form button.js-btn-next {
+    border: 2px solid #0252a9;
+}
+.multisteps-form__form button.js-btn-next:hover {
+    border: 2px solid #0252a9;
+}
+.multisteps-form__form button {
+    border: 2px solid #0252a9;
+}
+.multisteps-form__form button:focus {
+    box-shadow: none !important;
+}
+.multisteps-form__form button.btn-success {
+    border: 2px solid #02a073;
+    background: #02a073;
+    color: #fff;
+}
+.pagination a span {
+    margin: 0px 10px;
+}
+
+.registration_bg {
+    position: absolute;
+    top: 83px;
+    right: 0;
+    width: 120px;
+    height: 120px;
+}
+.registration_bg img {
+    width: 100%;
+}
+
+.content {
+    width: 95%;
+    margin: 0 auto 50px;
+}
+
+.content__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content__title--m-sm {
+    margin-bottom: 10px;
+}
+
+.multisteps-form__progress {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); */
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.multisteps-form__progress-btn {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    position: relative;
+    /* padding-top: 20px; */
+    color: rgba(108, 117, 125, 0.7);
+    text-indent: -9999px;
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px 0px;
+    font-weight: 500;
+}
+.multisteps-form__progress-btn .multisteps_content {
+    position: absolute;
+    bottom: -80%;
+    text-indent: 0;
+    font-size: 16px;
+}
+.multisteps-form__progress-btn {
+    position: relative;
+}
+.button-row .doctor-registraion-save-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 62%;
+}
+
+@media (min-width: 500px) {
+    .multisteps-form__progress-btn {
+        text-indent: 0;
+    }
+}
+
+.multisteps-form__progress-btn .multisteps_number {
+    width: 47px;
+    height: 47px;
+    border: solid 1px #02a073;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.6);
+    text-indent: 0;
+}
+
+.multisteps-form__progress-btn.js-active .multisteps_number {
+    background: #02a073;
+    color: #fff;
+}
+.multisteps-form__progress-btn.js-active .multisteps_content {
+    color: #000;
+    text-indent: 0;
+}
+.sidebar.opne ~ .home-section .multisteps-form__progress button::after {
+    position: absolute;
+    top: 29%;
+    left: 35px;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: block;
+    width: 49vh;
+    height: 2px;
+    content: "";
+    background-color: currentColor;
+    z-index: -1;
+    transform: translatey(50%);
+}
+.multisteps-form__progress-btn.js-active {
+    color: #02a073;
+}
+.multisteps-form__form {
+    position: relative;
+}
+
+.multisteps-form__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.multisteps-form__form .button-row {
+    justify-content: space-between;
+    float: inline-end;
+    width: 100%;
+}
+
+.multisteps-form__form .button-row button span {
+    margin: 0px 8px;
+}
+
+/* .sidebar ~ .home-section .multisteps-form__progress button::after {
+    top: 29%;
+    left: 65px;
+    width: 55vh;
+} */
+
+.content {
+    width: 95%;
+    margin: 0 auto 50px;
+}
+
+.content__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content__title--m-sm {
+    margin-bottom: 10px;
+}
+
+/* .multisteps-form__progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+} */
+
+.multisteps-form__progress-btn {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    position: relative;
+    /* padding-top: 20px; */
+    color: rgba(108, 117, 125, 0.7);
+    text-indent: -9999px;
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px 0px;
+    font-weight: 500;
+    width: calc(100% / 4);
+}
+
+/* @media (min-width: 500px) {
+      .multisteps-form__progress-btn {
+        text-indent: 0;
+      }
+    } */
+
+.multisteps-form__progress-btn .multisteps_number {
+    width: 47px;
+    height: 47px;
+    border: solid 1px #02a073;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.multisteps-form__progress-btn.js-active .multisteps_number {
+    background: #02a073;
+    color: #fff;
+}
+.multisteps-form__progress-btn.js-active .multisteps_content {
+    color: #000;
+}
+
+.multisteps-form__progress-btn:after {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transform: translatey(50%);
+}
+.multisteps-form__progress-btn.js-active::after {
+    background-color: #02a073;
+}
+/* .sidebar.open ~ .home-section .multisteps-form__progress button::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: 
+linear;
+    transition-delay: 0s;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: currentColor;
+    z-index: -1;
+    transform: translatey(50%);
+    width: 100%;
+} */
+.multisteps-form__progress-btn:first-child {
+    text-indent: 0;
+    align-items: flex-start;
+}
+/* .multisteps-form__progress-btn:nth-child(2){
+      align-items: flex-start;
+    }
+    .multisteps-form__progress-btn:nth-child(3){
+       align-items: flex-start;
+    } */
+.multisteps-form__progress-btn:last-child {
+    text-indent: 0;
+    align-items: flex-end;
+}
+
+.multisteps-form__progress-btn.js-active {
+    color: #02a073;
+}
+
+.multisteps-form__form {
+    position: relative;
+}
+
+.multisteps-form__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+.multisteps-form__form .button-row {
+    justify-content: space-between;
+    float: inline-end;
+    width: 100%;
+}
+
+.multisteps-form__form .button-row button span {
+    margin: 0px 8px;
+}
+.multisteps_check {
+    display: none !important;
+}
+.multisteps-form__progress-btn.js-active .multisteps_number {
+    display: none;
+}
+.multisteps-form__progress-btn.js-active .multisteps_check {
+    display: flex !important;
+}
+.add-btn {
+    width: 100%;
+}
+.add-btn button {
+    width: max-content;
+    border-width: 1px;
+    color: #0252a9;
+    background: #0252a9;
+    color: #fff;
+}
+.add-btn button:hover {
+    border-width: 1px;
+    border-color: #0252a9;
+}
+.degree_box {
+    background: #f3f5f7;
+    padding: 16px;
+    border-radius: 8px;
+}
+.registration_section .input_deta {
+    margin-bottom: 32px;
+}
+.degree_box .input_deta .form-control {
+    background: #ffff;
+}
+.add-btn button span {
+    padding-right: 5px;
+}
+
+/* .select-wrapper {
+    width:400px;
+    border:1px solid #007bff;
+    border-radius:4px;
+    padding:8px;
+  } */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.chips button {
+    width: auto;
+}
+.chip button:hover {
+    border: none;
+}
+.chip {
+    background: #e9f0fa;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+}
+.chip button {
+    border: none;
+    background: transparent;
+    margin-left: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mbbs_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #e6eef6;
+    padding: 13px 20px 13px 17px;
+    margin-top: 32px;
+}
+
+.mbbs_card .card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 35%;
+}
+
+.mbbs_card .degree {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+
+.mbbs_card .university {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.mbbs_card .card-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.mbbs_card .year-block {
+    text-align: left;
+}
+
+.mbbs_card .year-title {
+    font-size: 16px;
+    color: #555;
+}
+
+.mbbs_card .year {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+}
+
+.mbbs_card .close-btn {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}
+
+.upload-container {
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.upload-container .label {
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.upload-container .upload-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.upload-container .upload-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f3f5f7;
+}
+
+.upload-container .upload-input button {
+    padding: 8px 14px;
+    border: none;
+    background-color: #f0f4ff;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #0056d2;
+}
+.upload-input .upload-btn-wrapper button.btn {
+    background-color: #f3f5f7;
+}
+
+.upload-container .tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f5f8fc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    gap: 3px;
+}
+
+.upload-container .tag-icon {
+    color: #0056d2;
+    margin-right: 6px;
+}
+
+.upload-container .tag a {
+    margin-left: 10px;
+    color: #0056d2;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.upload-container .tag .remove {
+    margin-left: 8px;
+    cursor: pointer;
+    color: #999;
+    font-weight: bold;
+}
+.upload-container .upload-input .upload-btn-wrapper {
+    position: absolute;
+    right: 0;
+}
+
+.select_box {
+    margin-top: 42px;
+}
+/* .select_box .dropdown {
+      position: relative;
+      width: 100%;
+    
+      
+    }
+   .select_box .dropdown-toggle {
+     border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #F3F5F7;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: none;
+    }
+    .select_box .dropdown-menu {
+      position: absolute;
+      top: 110%;
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      background: white;
+      display: none;
+      z-index: 1;
+      border-radius: 5px;
+    }
+   .select_box .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border: none;
+    content: '';
+    background: url(../images/down_arrow.svg) no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    width: 15px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 1;
+    transform: translatey(-50%);
+}
+    .select_box  .dropdown.open .dropdown-menu {
+      display: block;
+    }
+    .select_box .dropdown input[type="text"] {
+          width: 97%;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 0.8px solid rgba(0, 0, 0, 0.10);
+    background: #fff;
+    }
+    .select_box .dropdown label {
+      display: block;
+      padding: 9px 10px;
+    }
+    .select_box .dropdown label:hover {
+          background: #E6EEF6;
+    }
+    .select_box label {
+    margin-bottom: 20px;
+} */
+
+.select_box .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border: none;
+    content: "";
+    background: url(../images/down_arrow.svg) no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    width: 15px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 1;
+    transform: translatey(-50%);
+}
+.select_box .dropdown {
+    position: relative;
+    width: 100%;
+}
+.select_box .dropdown-toggle {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f3f5f7;
+    font-size: 18px;
+}
+.select_box .dropdown-menu {
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: white;
+    display: none;
+    z-index: 1;
+    border-radius: 5px;
+}
+.select_box .dropdown.open .dropdown-menu {
+    display: block;
+}
+.select_box .dropdown input[type="text"] {
+    width: 97%;
+    margin: 8px;
+    padding: 9px 12px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.select_box .dropdown label {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+.select_box .dropdown label:hover {
+    background: var(--Blue-blue-50, #e6eef6);
+}
+.select_box label {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 18px;
+}
+.select_box .dropdown-menu label {
+    margin-bottom: 0px;
+}
+
+.select-menu {
+    max-width: 330px;
+    position: relative;
+    margin-bottom: 27px;
+}
+.select-menu::before {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border: none;
+    content: "";
+    background: url(../images/down_arrow.svg) no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    width: 15px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 1;
+    transform: translatey(-50%);
+}
+.select-menu .select-btn {
+    display: flex;
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    background: #fff;
+}
+.select-menu .options {
+    position: absolute;
+    width: 330px;
+    overflow-y: auto;
+    max-height: 350px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-duration: 0.35s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-fill-mode: both;
+    display: none;
+}
+.select-menu .options .option {
+    display: flex;
+    cursor: pointer;
+    padding: 9px 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+.select-menu .options .option:hover {
+    background: #e6eef6;
+}
+.select-menu .options .option i {
+    font-size: 25px;
+    margin-right: 12px;
+}
+.select-menu .options .option .option-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.select-btn i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+.select-menu.active .options {
+    display: block;
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Consultation Hours screen */
+.appointment_screen {
+    background: #f3f5f7;
+    padding: 24px 16px;
+    border-radius: 16px;
+}
+.starttime {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 18px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+.starttime .starttime_list {
+    width: 48%;
+}
+.starttime .starttime_list .time_am {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding-right: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.starttime .starttime_list .time_am input {
+    width: 80%;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+}
+.starttime .starttime_list .time_am input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+.starttime .starttime_list .time_am select {
+    width: 22%;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+.starttime label {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000;
+    font-family: Inter;
+}
+.starttime_box label {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+}
+.time_btn button {
+    background: #0252a9;
+    color: #fff;
+    margin-top: 26px;
+    padding: 15px 58px;
+    width: fit-content;
+    border-radius: 7px;
+    border: none;
+}
+.time_btn button .fa {
+    padding-right: 10px;
+}
+.appointment_box .select-menu {
+    width: 100%;
+    max-width: 100%;
+}
+.appointment_interval_screen h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.appointment_box .select-btn .span {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.appointment_interval_screen {
+    margin-top: 45px;
+}
+.appointment_box .input_deta input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+.billing_box ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.billing_box ul li {
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 16px;
+    font-family: Inter;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.billing_box ul li:last-child {
+    margin-bottom: 0px;
+}
+.billing_box ul li input {
+    width: 22px;
+    height: 22px;
+}
+.billing_box ul li label {
+    position: relative;
+    padding-left: 11px;
+}
+.billing_box ul li label:before {
+    content: "";
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 3.259px;
+    left: -11px;
+}
+.gst_box {
+    padding-left: 38px;
+}
+.billing_box ul li input {
+    display: none;
+}
+.billing_box ul li input:checked + label::before {
+    background: #0252a9;
+}
+.billing_box ul li input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+.gst_box h4 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+.gst_box p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.gst_box .alert.alert-danger {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 107, 74, 0.06);
+    margin-bottom: 44px;
+    margin-top: 24px;
+}
+.required_cononet p {
+    font-size: 18px;
+}
+.required_cononet p {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.multisteps_top_number .multisteps-form__panel {
+    width: 100%;
+    display: none;
+    position: static;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.multisteps_top_number .multisteps-form__panel.js-active {
+    display: block;
+}
+.multisteps_top_number .multisteps-form__panel::after {
+    display: none;
+}
+.multisteps_top_number .multisteps-form__panel li {
+    list-style: none;
+}
+.step_number {
+    width: 100%;
+}
+.step_number ul {
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 34px;
+}
+.step_number ul li {
+    color: #000;
+    font-size: 18px;
+}
+.multisteps_top_number .case {
+    display: none;
+}
+.multisteps_top_number .case.active {
+    display: block;
+}
+@media (max-width: 1199px) {
+    .upload_photo {
+        width: 70px;
+        height: 70px;
+        padding: 13px;
+    }
+
+    .upload-btn-wrapper .btn {
+        padding: 7px 16px;
+        font-size: 14px;
+        display: flex;
+        width: max-content;
+    }
+    .profile_right span {
+        margin-top: 9px;
+        font-size: 13px;
+    }
+    .input_deta h3 {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .multisteps-form__progress-btn .multisteps_number {
+        width: 40px;
+        height: 40px;
+    }
+    .contact-fome h3 {
+        margin-bottom: 18px;
+        font-size: 20px;
+    }
+    .input_deta h3 {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .multisteps-form__progress-btn .multisteps_content {
+        font-size: 14px;
+    }
+}
+/* Consultation Hours screen */
+
+/* registration_successful */
+
+.registration_successful {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration_screen {
+    width: 460px;
+    text-align: center;
+}
+.registration_screen h4 {
+    font-size: 36px;
+    color: #000;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+    margin-top: 26px;
+}
+.registration_screen p {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+.registration_screen .registration_icon {
+    width: 113px;
+    height: 113px;
+    margin: 0 auto;
+}
+.registration_screen .registration_icon img {
+    width: 100%;
+}
+.user-management .multisteps-form__panel {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+}
+.user-management .registration_icon {
+    border-radius: 68.414px;
+    border: 1.069px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 36px;
+}
+.registration_section .contact-fome {
+    border: 0px;
+    /* background: #F3F5F7; */
+}
+.user-management .registration_successful h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-top: 13px;
+}
+.user-management .registration_successful p {
+    margin-bottom: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+}
+.user-management .card.card_button {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-top: 30px;
+}
+@media (max-width: 1199px) {
+    .multisteps-form__form button {
+        width: fit-content;
+    }
+}
+@media (max-width: 1199px) {
+    .doctor_registration_box p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 991px) {
+    .contact-fome h3 {
+        font-size: 16px;
+    }
+    .select-menu .select-btn {
+        font-size: 16px;
+    }
+
+    .mbbs_card {
+        flex-direction: column;
+        position: relative;
+    }
+    .mbbs_card .card-left {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .mbbs_card .card-right {
+        width: 100%;
+    }
+    .mbbs_card .close-btn {
+        font-size: 18px;
+        color: #000;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 2px;
+    }
+    .starttime {
+        flex-direction: column;
+    }
+    .starttime .starttime_list {
+        width: 100%;
+    }
+    .starttime_box {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .contact-fome {
+        padding: 25px 15px;
+    }
+}
+
+/* registration_successful */

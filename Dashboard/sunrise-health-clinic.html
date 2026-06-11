@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sunrise Health Clinic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/clinic-details.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section create-user-management sunrise-health-clinic">
+       <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>      
+    
+  
+ <section class="registration_section">
+  
+    <div class="home_section_box">
+      <ul class="breadcrumb">
+        <li>Clinic Management</li>
+        <li><a href="#">Sunrise Health Clinic</a></li>
+      </ul>
+         <div class="contact-fome">
+        <section class="doctors">
+          <div class="doctors__header">
+
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="doctors__header_row">
+                <div class="doctors_header_img">
+                  <img src="images/clinic-details/home.png" alt="" srcset="">
+                </div>
+                <h2>Sunrise Health Clinic</h2>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <div class="sunrise-health-clinic-row">
+                <div class="doctor_registration_box">
+                  <div class="card card_button">
+                    <button>
+                      <span class="add_icon">
+                      <img src="images/edit_img.svg" alt="" srcset="">
+                      </span>
+                      <span class="add_content">Edit</span>
+                    </button>
+                    <button>
+                        <span class="add_icon">
+                      <img src="images/delete.png" alt="" srcset="">
+                      </span>
+                      <span class="add_content">Deactive</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="doctors__subtitle">View and manage clinic information</p>
+        </div>
+
+    <div class="doctors__row">
+      <div class="doctors__item">
+        <span class="doctors__label">Clinic ID</span>
+        <span class="doctors__value">121212121323</span>
+      </div>
+
+      <div class="doctors__item">
+        <span class="doctors__label">Clinic Address</span>
+        <span class="doctors__value">123 Medical Plaza, Anytown, CA 91234</span>
+      </div>
+
+      <div class="doctors__item">
+        <span class="doctors__label">Phone Number</span>
+        <span class="doctors__value">0123456789</span>
+      </div>
+
+      <div class="doctors__item">
+        <span class="doctors__label">State</span>
+        <span class="doctors__value">Madhya Pradesh</span>
+      </div>
+
+      <div class="doctors__item">
+        <span class="doctors__label">City</span>
+        <span class="doctors__value">Indore</span>
+      </div>
+
+      <div class="doctors__item">
+        <span class="doctors__label">Clinic Pincode</span>
+        <span class="doctors__value">110045</span>
+      </div>
+
+      <div class="doctors__item doctors__link">
+        <span class="doctors__label">Map Link</span>
+        <a href="https://myclinic.com/helloworld" target="_blank">https://myclinic.com/helloworld</a>
+      </div>
+    </div>
+
+
+    <div class="sunrise-health-clinic-tabbing">
+      <div class="section-header">
+        <h3>No of Doctors <span>(3)</span></h3>
+        <button class="toggle-btn active">
+          <img src="images/down_arrow.svg" alt="">
+        </button>
+      </div>
+
+      <div class="doctor-list active">
+        <div class="doctor-card">
+          <img src="images/anjali-sharma.png" alt="Doctor Image">
+          <div class="doctor-info">
+            <div>
+              <strong>Doctor ID</strong><br>
+              <span class="doctors__value">9876543210</span>
+            </div>
+            <div>
+              <strong>Doctor Name</strong><br>
+              <span class="doctors__value">Anjali Sharma</span>
+            </div>
+            <div>
+              <strong>Specialisation</strong><br>
+              <span class="doctors__value">Cardiology, Dermatology...</span>
+            </div>
+          </div>
+          <button class="details-btn">View details</button>
+        </div>
+
+        <div class="doctor-card">
+          <img src="images/anjali-sharma.png" alt="Doctor Image">
+          <div class="doctor-info">
+            <div>
+              <strong>Doctor ID</strong><br>
+              <span class="doctors__value">7876543210</span>
+            </div>
+            <div>
+              <strong>Doctor Name</strong><br>
+              <span class="doctors__value">Anjali Sharma</span>
+            </div>
+            <div>
+              <strong>Specialisation</strong><br>
+                <span class="doctors__value">Cardiology, Dermatology...</span>
+            </div>
+          </div>
+          <button class="details-btn">View details</button>
+        </div>
+
+        <div class="doctor-card">
+          <img src="images/anjali-sharma.png" alt="Doctor Image">
+          <div class="doctor-info">
+            <div>
+              <strong>Doctor ID</strong><br>
+              <span class="doctors__value">8876543210</span>
+            </div>
+            <div>
+              <strong>Doctor Name</strong><br>
+              <span class="doctors__value">Anjali Sharma</span>
+            </div>
+            <div>
+              <strong>Specialisation</strong><br>
+              <span class="doctors__value">Cardiology, Dermatology...</span>
+            </div>
+          </div>
+          <button class="details-btn">View details</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+                   
+
+      </div>
+    </div>
+ 
+</section>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // $(document).ready(function(){
+    //   $(".toggle-btn").click(function(){
+    //     $(".doctor-list").slideToggle();
+    //     $(this).html($(this).html() === "");
+    //   });
+    // });
+    
+
+    $(".toggle-btn").click(function(){
+      $(".doctor-list, .toggle-btn").toggleClass("active");
+    });
+  </script>
+</body>
+
+</html>

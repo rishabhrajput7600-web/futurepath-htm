@@ -1,0 +1,216 @@
+.card.card_button .blue_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #E6EEF6;
+    color: #282828;
+}
+.card.card_button .blue_button_01 .add_icon{
+
+}
+.card.card_button .blue_button_01 .add_icon {
+    width: 22px;
+    height: 22px;
+}
+.card.card_button .red_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #F6E6E6;
+    color: #C80A0A;
+}
+.card.card_button  .gray_button_01{
+background: #F3F5F7;
+border-radius: 8px;
+border: 1px solid rgba(0, 0, 0, 0.60);
+color: rgba(0, 0, 0, 0.80);
+}
+.view_details_screen .add_icon
+ 
+ {
+    width: 22px;
+    height: 22px;
+}
+ 
+
+.view_details_screen .contact p .super_content.super_img{
+    color: #0252A9;
+}
+.view_details_screen .doctor-profile .info {
+    flex: inherit;
+    width: max-content;
+}
+.view_details_screen .basic-plan {
+    padding: 0px;
+    position: static;
+}
+.view_details_screen .doctor-profile {
+    display: flex;
+    justify-content: space-between;
+}
+.view_details_screen .basic-plan .save-btn {
+    width: max-content;
+    padding: 10px 20px;
+}
+.view_details_screen .doctor_list_top {
+    position: sticky;
+    top: 86px;
+    z-index: 9;
+    background: #f3f5f7;
+    padding: 10px 30px;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+
+.current_appointment {
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    padding: 48px 28px;
+    margin-top: 16px;
+}
+
+.appointment-card {
+  max-width: 100%;
+  margin: auto;
+}
+
+.section-title {
+  color: #007b55;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.appointment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.detail-item {
+  min-width: 150px;
+}
+
+.label {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.value {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Online icon */
+.icon-online {
+  color: #007bff;
+  font-size: 18px;
+}
+
+/* Status badge */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.scheduled {
+  background-color: #eaf6f3;
+  color: #007b55;
+  border: 1px solid #bce3d6;
+}
+
+/* Visit Type */
+.visit-type {
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Payment Status */
+.payment-status {
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.payment-status i {
+  font-size: 20px;
+}
+
+.unpaid {
+  color: #d32f2f;
+}
+.value .value_img {
+    width: 20px;
+}
+.value .value_img img {
+    width: 100%;
+}
+
+.current_appointment .contact-fome {
+    border-radius: 0;
+    border: none;
+}
+.row-box {
+    align-items: end;
+}
+.row-box .form-control {
+    margin-top: 0;
+}
+.input_deta_btn {
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.upload_file.photo_file::before{
+    background: url(../images/camera-icon.svg) no-repeat;
+    width: 22px;
+    height: 22px;
+}
+.prescription_box h2 {
+    font-size: 24px;
+}
+.prescription_box {
+    border-radius: 8px;
+    background: rgba(230, 238, 246, 0.60);
+    padding: 32px 24px;
+}
+.prescription_box .upload_row .input_deta {
+    margin-bottom: 0px;
+}
+.prescription_box .upload_row .col-md-1.col-sm-12 {
+    width: 2.333333%;
+    display: flex;
+    align-items: center;
+}
+.prescription_box .upload_row{
+      margin-bottom: 20px;
+      margin-top: 20px;
+}
+.prescription_box .upload_row .input_deta .form-control {
+    margin-top: 0;
+}
+.prescription_box .upload_row label {
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+.write_prescription_box .input_deta .form-control {
+    background: #fff;
+}

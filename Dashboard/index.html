@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset='utf-8'>
+       <meta name='viewport' content='width=device-width, initial-scale=1'>
+<<<<<<< HEAD
+  <title>Home</title>
+=======
+  <title>Dashboard</title>
+>>>>>>> d7aadd326aa41690732dc5bbbfee3d45ac8d94ce
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+<!-- <style>
+ 
+
+
+    
+</style> -->
+</head>
+<body>
+ 
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      
+      <div class="sidebar_btn" id="btn">
+         <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+     
+    </div>
+    <ul class="nav-list">
+     <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      
+      <li>
+        <a href="#">
+           <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+           <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+            <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+           <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+           <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+      
+    </ul>
+  </div>
+ 
+  <section class="home-section">
+  <div class="topbar">
+  <div class="sidebar_btn" id="btn">
+         <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+  <div class="search-box">
+    <input type="text" placeholder="Search">
+  </div>
+
+  <div class="right-section">
+    <!-- Notification -->
+    <div class="icon-btn dropdown">
+       <div class="bell_img">
+        <img src="images/bell_icon.svg" alt="" srcset="">
+       </div>
+      <div class="dropdown-menu">
+        <p>No new notifications</p>
+      </div>
+    </div>
+
+    <!-- User -->
+    <div class="user-menu dropdown">
+      <img src="images/username_img.png" alt="User" class="avatar">
+      <span class="username">Sachin</span>
+      <span class="arrow">
+        <img src="images/down_arrow.svg" alt="" srcset="">
+      </span>
+      <div class="dropdown-menu">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="home_section_box">
+    <div class="top-cards">
+      <div class="card"><h3>Total Revenue</h3><p>₹42.5K</p></div>
+      <div class="card"><h3>Total Doctors</h3><p>250</p></div>
+      <div class="card"><h3>Trending Location</h3><p>New Delhi</p></div>
+      <div class="card"><h3>Total Appointments</h3><p>1000</p></div>
+      <div class="card card_button"> 
+        <button> <span class="add_content">Add Doctor </span> 
+          <span class="add_icon">
+            <img src="images/add_icon.png" alt="" srcset="">
+          </span>
+        </span></button>
+      </div>
+    </div>
+
+
+    <div class="doctors_count_box">
+  <div class="doctors_count grid-2">
+      <div class="card">
+       <div class="card_top_content">
+        <div class="card_top_left">
+          <div class="card_top_left_box">
+             <h3>Doctors Count</h3>
+          </div>
+          
+        </div>
+          <div class="card_top_right">
+<div class="card_top_select"> 
+ <div class="custom-select-wrapper">
+  <button class="custom-select-btn" id="countryBtn">
+    Belgium 
+    <span class="caret">
+      
+    </span>
+  </button>
+  <div class="custom-dropdown" id="countryDropdown">
+    <div class="search-box">
+      <input type="text" id="countrySearch" placeholder="Search..." />
+    </div>
+    <ul class="custom-options" id="countryOptions">
+      <li>Argentina</li>
+      <li>Austria</li>
+      <li class="selected">Belgium</li>
+      <li>Brazil</li>
+      <li>Canada</li>
+      <li>Denmark</li>
+      <li>Finland</li>
+      <li>France</li>
+      <li>Germany</li>
+      <li>Ireland</li>
+      <li>Italy</li>
+      <li>Mexico</li>
+      <li>Norway</li>
+      <li>Poland</li>
+      <li>Portugal</li>
+      <li>Spain</li>
+      <li>Sweden</li>
+      <li>Switzerland</li>
+      <li>UK</li>
+      <li>USA</li>
+      <li>Venezuela</li>
+    </ul>
+  </div>
+</div>
+ <div class="custom-select-wrapper">
+  <button class="custom-select-btn" id="countryBtn">
+    Belgium 
+    <span class="caret">
+      
+    </span>
+  </button>
+  <div class="custom-dropdown" id="countryDropdown">
+    <div class="search-box">
+      <input type="text" id="countrySearch" placeholder="Search..." />
+    </div>
+    <ul class="custom-options" id="countryOptions">
+      <li>Argentina</li>
+      <li>Austria</li>
+      <li class="selected">Belgium</li>
+      <li>Brazil</li>
+      <li>Canada</li>
+      <li>Denmark</li>
+      <li>Finland</li>
+      <li>France</li>
+      <li>Germany</li>
+      <li>Ireland</li>
+      <li>Italy</li>
+      <li>Mexico</li>
+      <li>Norway</li>
+      <li>Poland</li>
+      <li>Portugal</li>
+      <li>Spain</li>
+      <li>Sweden</li>
+      <li>Switzerland</li>
+      <li>UK</li>
+      <li>USA</li>
+      <li>Venezuela</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+ 
+          </div>
+       </div>
+        <!-- <canvas id="donutChart" width="750" height="750" style="display: block; box-sizing: border-box; height: 750px; width: 750px;"></canvas> -->
+
+        <!-- <div class="chart-container">
+  <div class="chart-wrapper">
+    <canvas id="donutChart"></canvas>
+    <div class="center-text" style="top: 50%;left: 50%;transform: translate(-50%,-50%);">
+      <small>Total Doctors</small>
+      250
+    </div>
+  </div>
+
+  <div class="chart-legend">
+    <div class="legend-item">
+      <div class="legend-color" style="background-color:#00C49F;"></div> Active
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color:#FF6F61;"></div> Inactive
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color:#CCCCCC;"></div> Pending
+    </div>
+  </div>
+</div> -->
+
+<div class="chart-container">
+  <!-- Donut chart -->
+  <div class="chart-wrapper">
+    <canvas id="donutChart" width="750" height="750" style="display: block; box-sizing: border-box; height: 750px; width: 750px;"></canvas>
+    <div class="center-text">
+      <small>Total Doctors</small>
+      250
+    </div>
+  </div>
+
+  <!-- Legend on the right -->
+  <div class="chart-legend">
+    <div class="legend-item">
+      <div class="legend-color" style="background-color:#00C49F;"></div> Active
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color:#FF6F61;"></div> Inactive
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color:#CCCCCC;"></div> Pending
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="card">
+        <div class="card_top_content">
+        <div class="card_top_left">
+          <div class="card_top_left_box">
+             <h3>Doctors Count</h3>
+          </div>
+          
+        </div>
+          <div class="card_top_right">
+<div class="card_top_select"> 
+ <div class="custom-select-wrapper">
+  <button class="custom-select-btn" id="countryBtn">
+    Belgium 
+    <span class="caret">
+      
+    </span>
+  </button>
+  <div class="custom-dropdown" id="countryDropdown">
+    <div class="search-box">
+      <input type="text" id="countrySearch" placeholder="Search..." />
+    </div>
+    <ul class="custom-options" id="countryOptions">
+      <li>Argentina</li>
+      <li>Austria</li>
+      <li class="selected">Belgium</li>
+      <li>Brazil</li>
+      <li>Canada</li>
+      <li>Denmark</li>
+      <li>Finland</li>
+      <li>France</li>
+      <li>Germany</li>
+      <li>Ireland</li>
+      <li>Italy</li>
+      <li>Mexico</li>
+      <li>Norway</li>
+      <li>Poland</li>
+      <li>Portugal</li>
+      <li>Spain</li>
+      <li>Sweden</li>
+      <li>Switzerland</li>
+      <li>UK</li>
+      <li>USA</li>
+      <li>Venezuela</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+          </div>
+       </div>
+        <canvas id="barChart" width="750" height="375" style="display: block; box-sizing: border-box; height: 375px; width: 750px;"></canvas>
+      </div>
+    </div>
+    </div>
+
+<div class="doctors_count_box appointmen_box"> 
+   <div class="doctors_count grid-2">
+      <div class="card">
+      <div class="card_top_content">
+        <div class="card_top_left">
+          <div class="card_top_left_box">
+             <h3>Doctors Count</h3>
+          </div>
+          
+        </div>
+          <div class="card_top_right">
+<div class="card_top_select"> 
+ <div class="custom-select-wrapper">
+  <button class="custom-select-btn" id="countryBtn">
+    Belgium 
+    <span class="caret">
+      
+    </span>
+  </button>
+  <div class="custom-dropdown" id="countryDropdown">
+    <div class="search-box">
+      <input type="text" id="countrySearch" placeholder="Search..." />
+    </div>
+    <ul class="custom-options" id="countryOptions">
+      <li>Argentina</li>
+      <li>Austria</li>
+      <li class="selected">Belgium</li>
+      <li>Brazil</li>
+      <li>Canada</li>
+      <li>Denmark</li>
+      <li>Finland</li>
+      <li>France</li>
+      <li>Germany</li>
+      <li>Ireland</li>
+      <li>Italy</li>
+      <li>Mexico</li>
+      <li>Norway</li>
+      <li>Poland</li>
+      <li>Portugal</li>
+      <li>Spain</li>
+      <li>Sweden</li>
+      <li>Switzerland</li>
+      <li>UK</li>
+      <li>USA</li>
+      <li>Venezuela</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+          </div>
+       </div>
+        <canvas id="lineChart" width="750" height="375" style="display: block; box-sizing: border-box; height: 375px; width: 750px;"></canvas>
+      </div>
+      <div class="card">
+       <div class="card_top_content">
+        <div class="card_top_left">
+          <div class="card_top_left_box">
+             <h3>Doctors Count</h3>
+          </div>
+          
+        </div>
+          <div class="card_top_right">
+<div class="card_top_select"> 
+ <div class="custom-select-wrapper">
+  <button class="custom-select-btn" id="countryBtn">
+    Belgium 
+    <span class="caret">
+      
+    </span>
+  </button>
+  <div class="custom-dropdown" id="countryDropdown">
+    <div class="search-box">
+      <input type="text" id="countrySearch" placeholder="Search..." />
+    </div>
+    <ul class="custom-options" id="countryOptions">
+      <li>Argentina</li>
+      <li>Austria</li>
+      <li class="selected">Belgium</li>
+      <li>Brazil</li>
+      <li>Canada</li>
+      <li>Denmark</li>
+      <li>Finland</li>
+      <li>France</li>
+      <li>Germany</li>
+      <li>Ireland</li>
+      <li>Italy</li>
+      <li>Mexico</li>
+      <li>Norway</li>
+      <li>Poland</li>
+      <li>Portugal</li>
+      <li>Spain</li>
+      <li>Sweden</li>
+      <li>Switzerland</li>
+      <li>UK</li>
+      <li>USA</li>
+      <li>Venezuela</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+          </div>
+       </div>
+       <div class="tablecontainer">
+<table>
+          <thead>
+            <tr>
+              <th>Doctor Name</th>
+              <th>Plan</th>
+              <th>Expiry Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Dr. Patel</td><td>Gold</td><td>Sep 15, 2026</td><td>Upcoming</td></tr>
+            <tr><td>Dr. Singh</td><td>Silver</td><td>Oct 20, 2026</td><td>Upcoming</td></tr>
+            <tr><td>Dr. Johnson</td><td>Platinum</td><td>Nov 30, 2026</td><td>Soon</td></tr>
+            <tr><td>Dr. Lee</td><td>Basic</td><td>Dec 5, 2026</td><td>Soon</td></tr>
+            <tr><td>Dr. Kim</td><td>Diamond</td><td>Jan 1, 2027</td><td>Upcoming</td></tr>
+          </tbody>
+        </table>
+       </div>
+        
+      </div>
+    </div>
+</div>
+ 
+  
+   </div>
+   
+   
+
+  </section>
+ 
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+   <script src="js/jquery.min.js"></script>
+  <script  src="js/script.js"></script>
+
+</body>
+</html>

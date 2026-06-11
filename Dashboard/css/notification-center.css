@@ -1,0 +1,435 @@
+.notification-center #tabs-nav {
+    margin: 30px 0;
+}
+
+.notification-center .notification-center-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification-center .doctor_appointment_row {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+}
+
+.notification-center .doctor_appointment_left {
+    width: 67px;
+}
+
+.notification-center-card .doctor_appointment_img {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #F1F8FF;
+    border: 1px solid #dadada;
+}
+.notification-center-card .doctor_appointment_img img {
+    width: 100%;
+}
+.notification-center-box .notification-center-card {
+   width: 100%;
+    border-radius: 12px;
+    background: var(--theme-white-color);
+    box-shadow: 2px 2px 28px 0 rgba(0, 0, 0, 0.10);
+    padding: 22px 36px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-center-text {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.notification-center-upgrade a {
+    color: #000;
+    text-decoration: none;
+}
+
+.doctor_accordion_row {
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-right: 61px;
+
+}
+.doctor_accordion_left_heading h3 {
+    color: var(--Black-shades-black-100, #000);
+    font-size: 18px;
+    font-weight: 400;
+}
+.doctor_accordion_left_heading .doctor_timming {
+    color: var(--Black-shades-black-60, rgba(0, 0, 0, 0.60));
+    font-size: 16px;
+    font-weight: 500;
+}
+.doctor_accordion_row .doctor_accordion_left {
+    width: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 85%;
+}
+.doctor_accordion_row .doctor_accordion_right {
+    width: fit-content;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+    width: 15%;
+}
+.doctor_accordion_inr.doctor_accordion_inr {
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+.doctor_appointment_img {
+    width: 63px;
+    height: 63px;
+}
+.left_icon_doctor {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.838vw;
+    padding: 15px;
+    border: 1.575px solid rgba(2, 82, 169, 0.09);
+    background: #E6EEF6;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.left_icon_doctor img {
+    width: 100%;
+}
+.doctor_accordion_right .doctor_list_search {
+    display: flex;
+    gap: 0px 12px;
+}
+.doctor_list_search .card_button {
+    padding: 0px;
+    align-items: start;
+    justify-content: flex-start;
+    width: fit-content;
+}
+.card.card_button {
+    background: transparent;
+    box-shadow: none;
+    padding-right: 0;
+    display: flex;
+    justify-content: end;
+    border: none;
+    padding: 0px;
+}
+.card.card_button button {
+    border-radius: 8px;
+    background: #0252a9;
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    width: fit-content;
+    flex-direction: row-reverse;
+}
+.card.card_button .blue_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #E6EEF6;
+    color: #282828;
+}
+.card.card_button button .add_content {
+    width: 90%;
+    line-height: normal;
+}
+.card.card_button .blue_button_01 .add_icon {
+    width: 22px;
+    height: 22px;
+}
+.add_icon img {
+    width: 100%;
+}
+.card.card_button .white_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #fff;
+    color: #282828;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 14px;
+}
+.card.card_button  .red_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #F6E6E6;
+    color: #C80A0A;
+}
+
+.doctor_accordion_row::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 1px;
+    height: 55px;
+    background: rgba(0, 0, 0, 0.20);
+    right: 4%;
+    transform: translateY(-50%);
+}
+.doctor_accordion_header {
+    position: relative;
+}
+.accordion_icon_img {
+    width: 43px;
+    height: 43px;
+    border-radius: 100%;
+    background: #E6EEF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.accordion_header_icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.doctor_accordion_inr.active .accordion_icon_img  {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.left_icon_doctor.green_icon_bg {
+background: #E6FCF6;
+}
+.left_icon_doctor.red_icon_bg {
+background: #F5D6D6;
+}
+.accordion_content table tr td:first-child {
+    width: 25%;
+}
+.accordion_content table tr td:last-child {
+    width: 65%;
+}
+.accordion_content {
+    padding-top: 10px;
+    display: none;
+}
+.doctor_accordion_inr.active .accordion_content {
+    display: block;
+}
+.accordion_content table tr th h3 {
+    color: var(--Black-shades-black-100, #000);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+.accordion_content table tr td span {
+    font-weight: 500;
+}
+.accordion_content table tr td {
+    color: var(--Black-shades-black-60, rgba(0, 0, 0, 0.60));
+    font-weight: 500;
+}
+.notification-center-upgrade a {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #282828;
+}
+
+.doctor_accordion_header.active .accordion_content {
+    display: block;
+}
+.doctor_accordion_row .doctor_accordion_right .three-dots {
+    cursor: pointer;
+}
+.notification-center .three-menu.active {
+        display: block;
+    }
+
+.notification-center .three-menu {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    position: absolute;
+    z-index: 99;
+    bottom: -200%;
+    right: 6%;
+    display: none;
+}
+
+    .notification-center .three-menu  .reschedule {
+        color: #007bff;
+    }
+
+    .notification-center .three-menu .cancel {
+        color: red;
+    }
+
+    .notification-center .three-menu .no-show {
+        color: gray;
+        background-color: transparent !important;
+    }
+
+    .notification-center .three-menu .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+
+    .notification-center .three-menu .menu-item i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
+.doctor_accordion_header .dropdown {
+    width: auto;
+}
+.doctor_accordion_header .dropdown .dropdown-toggle {
+    background: transparent;
+    border: transparent;
+    padding: 0px;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doctor_accordion_header  .dropdown a .fa {
+    color: #000000;
+}
+.doctor_accordion_header  .dropdown ul li.view_btn {
+    color: #000;
+}
+.doctor_accordion_header  .dropdown ul li a {
+    font-size: 16px;
+    font-weight: 400;
+}
+.doctor_accordion_header .dropdown ul li.view_btn img,
+.doctor_accordion_header .dropdown ul li.edit_btn img,
+.doctor_accordion_header .dropdown ul li.delete_btn img {
+    margin-right: 5px;
+}
+@media (max-width: 1600px) {
+    .card.card_button .add_content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1199px) { 
+    .notification-center .notification-center-tabs {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .notification-center-box .notification-center-card {
+        gap: 20px;
+        align-items: self-start;
+    }
+    .notification-center .doctor_appointment_row {
+        width: 75%;
+    }
+    .notification-center .notification-center-upgrade {
+        width: 25%;
+        display: flex;
+        justify-content: end;
+    }
+    .doctor_accordion_row::after {
+    right: 8%;
+}
+}
+
+@media (max-width: 767px) { 
+    .notification-center-box .notification-center-card { 
+        flex-wrap: wrap;
+    }
+   .notification-center-tabs #tabs-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+   .notification-center-tabs #tabs-nav a {
+        padding: 9px 10px;
+        font-size: 16px;
+       
+    }
+   .notification-center-tabs .doctor_list_right {
+        width: 100%;
+    }
+    .notification-center-box .notification-center-card {
+        padding: 15px 15px;
+    }
+    .notification-center .doctor_appointment_row {
+        width: 100%;
+    }
+    .notification-center .notification-center-upgrade {
+        width: 100%;
+    }
+    .doctor_accordion_inr.active .accordion_content {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.doctor_accordion_row::after {
+        right: 16%;
+    }
+.left_icon_doctor {
+    padding: 20px;
+}
+}
+@media (max-width: 400px) { 
+
+    .doctor_accordion_row .doctor_accordion_left {
+    align-items: start;
+    flex-direction: column;
+}
+.doctor_appointment_img {
+    width: 40px;
+    height: 40px;
+}
+.left_icon_doctor {
+    padding: 10px;
+}
+.doctor_accordion_inr.doctor_accordion_inr {
+    padding: 20px 10px 20px 15px;
+}
+}

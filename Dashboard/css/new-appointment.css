@@ -1,0 +1,101 @@
+.new-appointment .select_box
+ {
+    margin-top: 0px;
+}
+.new-appointment .select-btn {
+    background: #f3f5f7;
+}
+.new-appointment .select-btn .sBtn-text{
+      color: rgba(0, 0, 0, 0.60);
+}
+.contact_fome_bottom .starttime {
+    margin-top: 0px;
+}
+.contact_fome_bottom .starttime {
+    margin-top: 0px;
+    padding: 0px;
+}
+#tabs-nav {
+    background: #FFF;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 16px 4px;
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+#tabs-nav a {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.80);
+    border-radius: 8px;
+}
+#tabs-nav li.active a{
+    background: #0252A9;
+    color: #FFF;
+}
+.view_details_screen .tab-content .search_box button {
+    width: 5%;
+        background: #E6EEF6;
+}
+.tab-content .search_box input {
+    width: 95%;
+        background: #E6EEF6;
+}
+.view_details_screen .search_box form {
+    border-radius: 8px;
+    border: 0.8px solid rgba(0, 0, 0, 0.10);
+    background: #E6EEF6;
+    color: rgba(0, 0, 0, 0.60);
+}
+.view_details_screen .tab-content .search_box input::placeholder{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.60);
+}
+.contact-fome h4 {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+.disabled-btn{
+    opacity: 0.6;
+}
+.new-appointment .table-container {
+    height: auto;
+}
+@media (max-width: 1535px) {
+ .contact_fome_bottom .col-sm-12.col-md-4 {
+    width: 50%;
+}
+}
+@media (max-width: 767px) {
+.contact_fome_bottom .col-sm-12.col-md-4 {
+        width: 100%;
+    }
+    .view_details_screen .tab-content .search_box button {
+    width: 20%;
+    
+}
+.tab-content .search_box input{
+  width: 80%;
+}
+#tabs-nav {
+       width: 100%;
+}
+#tabs-nav a {
+    padding: 9px 10px;
+    font-size: 14px;
+     font-weight: 400;
+     border-radius: 8px;
+}
+.breadcrumb {
+    margin-bottom: 15px;
+}
+}

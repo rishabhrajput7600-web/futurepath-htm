@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Doctor Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/clinic-details.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section create-user-management">
+
+    <div class="topbar">
+      <div class="btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_section_box management_user_detail doctor-profile_box">
+      
+  <div class="doctor_list_top">
+        <div class="doctor_list_row">
+          <div class="doctor_list_left">
+            <div class="doctor_list_contnet">
+              <h1>Doctor Profile</h1>
+            </div>
+          </div>
+          <div class="doctor_list_right">
+            <div class="doctor_list_search">
+              <div class="card card_button">
+<button>
+ 
+<span class="add_content">Edit Details</span>
+
+</button>
+ 
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="management_user_detail_box">
+        <div class="doctor-profile">
+          <div class="doctor_profile_img"> <img src="images/anjali.svg" alt="Anjali Sharma"></div>
+          <div class="info">
+            <h2>Anjali Sharma</h2>
+            <p><strong>Doctors Hub Clinic</strong>
+              <p>
+                <span class="super_img"><img src="images/cardilology_img.png" alt="" srcset=""></span><span
+                  class="super_content">Cardiology, Psychiatry</span></p>
+              <div class="contact">
+                <p> <span class="super_img">
+                    <img src="images/my_ profile/phone_icon.svg" alt="" srcset="">
+                  </span> <span class="super_content"> +91 0123456789</span></p>
+                <p><span class="super_img">
+                    <img src="images/my_ profile/email_icon.svg" alt="" srcset="">
+                  </span>
+                 <span class="super_content">sachin@gmail.com</span> </p>
+                <p><span class="super_img">
+                    <img src="images/my_ profile/location_icon.svg" alt="" srcset="">
+                  </span> <span class="super_content">Mumbai, Maharashtra</span></p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-fome">
+        <section class="doctors basic_box">
+          <div class="doctors__header">
+            <div class="doctors__header_row">
+              <div class="doctors_header_img">
+                <img src="images/profile_icon.png" alt="" srcset="">
+              </div>
+              <h2>Basic Information</h2>
+            </div>
+
+          </div>
+<div style="overflow-x:auto;">
+ <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Doctor ID</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Pincode</th>
+                <th scope="col">Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9876543210</td>
+                <td>Female</td>
+                <td>15/10/1991</td>
+                <td>110059</td>
+                <td>123 Medical Center Street, Mumbai, <br> Maharashtra - 400001</td>
+              </tr>
+
+            </tbody>
+          </table>
+</div>
+         
+
+        </section>
+
+      </div>
+
+      <div class="professional_box">
+        <div class="doctors__header">
+          <div class="doctors__header_row">
+            <div class="doctors_header_img">
+              <img src="images/profile_icon.png" alt="" srcset="">
+            </div>
+            <h2>Professional Details</h2>
+          </div>
+
+        </div>
+
+        <div class="degree_content_top">
+           <h3>Degree Details</h3>
+        <div class="col-md-12 col-sm-12">
+          <div class="mbbs_card">
+
+            <div class="card-right">
+              <div class="year-block">
+                <div class="year-title">Medical Degree</div>
+                <div class="year">MBBS</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">University Name</div>
+                <div class="year">Northbridge Medical University</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">Institute Passed year</div>
+                <div class="year">2024</div>
+              </div>
+
+              <div class="year-block">
+                <div class="year-title">Practice Started year </div>
+                <div class="year">2026</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+          <div class="mbbs_card">
+
+            <div class="card-right">
+              <div class="year-block">
+                <div class="year-title">Medical Degree</div>
+                <div class="year">MBBS</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">University Name</div>
+                <div class="year">Northbridge Medical University</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">Institute Passed year</div>
+                <div class="year">2024</div>
+              </div>
+
+              <div class="year-block">
+                <div class="year-title">Practice Started year </div>
+                <div class="year">2026</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+   </div>
+
+   <div class="permission-container">
+   
+   <div class="row">
+       <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="permission_box">
+                 <h3>Permission Assigned</h3>
+<div class="permissions">
+      <div class="permission-tag tag-gray">Psychiatry</div>
+      <div class="permission-tag tag-gray">Cardilogy</div>
+      <div class="permission-tag tag-gray">Dermatology</div>
+     
+    </div>
+        </div>
+  
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="permission_box">
+     <h3>Area of Expertises</h3>
+<div class="permissions">
+       <div class="permission-tag tag-gray">Psychiatry</div>
+      <div class="permission-tag tag-gray">Cardilogy</div>
+      <div class="permission-tag tag-gray">Dermatology</div>
+     
+    </div>
+          </div>
+    
+      </div>
+   </div>
+    
+  </div>
+
+        <div class="certifications_box">
+          <h3>Certifications</h3>
+<div class="row">
+  <div class=" col-lg-6  col-xl-3  col-md-6 col-sm-12">
+        <div class="tag">
+      <span class="tag-icon">
+        <img src="images/certified_icon.svg" alt="" srcset="">
+      </span>
+      Board Certified Cardiologist
+      <a href="#">View</a>
+     
+    </div>
+    </div>
+<div class=" col-lg-6 col-xl-3 col-md-6 col-sm-12">
+        <div class="tag">
+      <span class="tag-icon">
+        <img src="images/certified_icon.svg" alt="" srcset="">
+      </span>
+      Board Certified Cardiologist
+      <a href="#">View</a>
+      
+    </div>
+    </div>
+<div class=" col-lg-6 col-xl-3 col-md-6 col-sm-12">
+        <div class="tag">
+      <span class="tag-icon">
+        <img src="images/certified_icon.svg" alt="" srcset="">
+      </span>
+      Board Certified Cardiologist
+      <a href="#">View</a>
+      
+    </div>
+    </div>
+</div>
+        </div>
+
+      </div>
+
+      <div class="professional_box">
+        <div class="doctors__header">
+          <div class="doctors__header_row">
+            <div class="doctors_header_img">
+              <img src="images/watch.png" alt="" srcset="">
+            </div>
+            <h2>Consultation Hours</h2>
+          </div>
+          <p class="appointment_text">Available Appointment Time</p>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+          <div class="doctors__row">
+            <div class="consultation_table_top">
+              <div class="consultation_days">
+                <span>Monday</span>
+                <span>Tuesday</span>
+                <span>Wednesday</span>
+                <span>Thursday</span>
+                <span>Friday</span>
+                <span>Saturday</span>
+              </div>
+            </div>
+
+            <div class="consultation_table_bottom">
+              <div class="consultation_time">
+                <span>09:00AM - 05:00PM</span>
+                <span>09:00AM - 05:00PM</span>
+                <span>09:00AM - 05:00PM</span>
+                <span>09:00AM - 05:00PM</span>
+                <span>09:00AM - 05:00PM</span>
+                <span>09:00AM - 05:00PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+          <div class="mbbs_card">
+
+            <div class="card-right">
+              <div class="year-block">
+                <div class="year-title">Appointment Interval </div>
+                <div class="year">30 Minutes</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">Free Consultation</div>
+                <div class="year">7 Days</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">Consultation Fee </div>
+                <div class="year">₹ 800</div>
+              </div>
+
+              <div class="year-block">
+                <div class="year-title">Billing Preference</div>
+                <div class="year"><i class="fa fa-file-text"></i> Invoice</div>
+              </div>
+              <div class="year-block">
+                <div class="year-title">GST Number</div>
+                <div class="year">27AABCU9603R1ZX</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

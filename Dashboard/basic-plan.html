@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Plan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/form.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/doctor-view-patient.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <style>
+        .card.card_button .blue_button_01 {
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            background: #E6EEF6;
+            color: #282828;
+        }
+
+        .card.card_button .blue_button_01 .add_icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .card.card_button .red_button_01 {
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            background: #F6E6E6;
+            color: #C80A0A;
+        }
+
+        .card.card_button .gray_button_01 {
+            background: #F3F5F7;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.60);
+            color: rgba(0, 0, 0, 0.80);
+        }
+
+        .view_details_screen .add_icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .view_details_screen .contact p .super_content.super_img {
+            color: #0252A9;
+        }
+
+        .view_details_screen .doctor-profile .info {
+            flex: inherit;
+            width: max-content;
+        }
+
+        .view_details_screen .basic-plan {
+            padding: 0px;
+            position: static;
+        }
+
+        .view_details_screen .doctor-profile {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .view_details_screen .basic-plan .save-btn {
+            width: max-content;
+            padding: 10px 20px;
+        }
+
+        .view_details_screen .doctor_list_top {
+            top: 86px;
+            z-index: 9;
+            background: #f3f5f7;
+            padding: 10px 30px;
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <div class="logo_name">
+                <img src="images/logo.png" alt="" srcset="">
+            </div>
+            <div class="sidebar_btn" id="btn">
+                <img src="images/sidebar_icon.svg" alt="" srcset="">
+            </div>
+        </div>
+        <ul class="nav-list">
+            <li class="active">
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Messages</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">File Manager</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar_incon">
+                        <img src="images/dashboard_icon.png" alt="">
+                    </div>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section doctor_list_section basic_plan_sec">
+        <div class="topbar">
+            <div class="sidebar_btn" id="btn">
+                <img src="images/sidebar_icon.svg" alt="" srcset="">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="right-section">
+                <!-- Notification -->
+                <div class="icon-btn dropdown">
+                    <div class="bell_img">
+                        <img src="images/bell_icon.svg" alt="" srcset="">
+                    </div>
+                    <div class="dropdown-menu">
+                        <p>No new notifications</p>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-menu dropdown">
+                    <img src="images/username_img.png" alt="User" class="avatar">
+                    <span class="username">Sachin</span>
+                    <span class="arrow">
+                        <img src="images/down_arrow.svg" alt="" srcset="">
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="home_section_box">
+            <ul class="breadcrumb">
+                <li>Appointments</li>
+                <li><a href="#">View details</a></li>
+            </ul>
+        </div> -->
+        <div class="home_section_box basic_plan_inner">
+
+            <ul class="breadcrumb">
+                <li>Dashboard</li>
+                <li><a href="#">Add Doctor</a></li>
+            </ul>
+
+            <div class="subscription-card">
+                <div class="plan-header">
+                    <div>
+                    <h1>Basic Plan</h1>
+                    <div class="plan-subtitle">View and manage Plan information</div>
+                    </div>
+                    <div class="plan-header-buttons">
+                    <button class="edit-btn">Edit
+                        <img src="images/edit_img.svg" alt="">
+                    </button>
+                    <button class="deactivate-btn">Deactivate</button>
+                    </div>
+                </div>
+
+                <div class="section-title">Basic Info</div>
+
+                <div class="plan-info">
+                    <div class="info-item">
+                    <div class="info-label">Plan Name</div>
+                    <div class="info-value">Basic Plan</div>
+                    </div>
+
+                    <div class="info-item">
+                    <div class="info-label">Plan Color</div>
+                    <div class="info-value">
+                        <input type="radio" checked />
+                        Blue
+                    </div>
+                    </div>
+
+                    <div class="info-item">
+                    <div class="info-label">Recommended Badge</div>
+                    <div class="info-value">Yes</div>
+                    </div>
+
+                    <div class="info-item">
+                    <div class="info-label">Subscribed User</div>
+                    <div class="info-value">22</div>
+                    </div>
+
+                    <div class="info-item">
+                    <div class="info-label">Plan Status</div>
+                    <div class="info-value">Active</div>
+                    </div>
+
+                    <div class="info-item">
+                    <div class="info-label">Monthly Pricing</div>
+                    <div class="info-value blue">₹899 /mo</div>
+                    </div>
+
+                    <div class="info-item">
+                    <div class="info-label">Yearly Pricing</div>
+                    <div class="info-value blue">
+                        ₹9999 /Yearly <span class="badge">17% OFF</span>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h4>Features</h4>
+                    <div class="features-grid">
+                        <div class="features-item">
+                            <div>Patient Management :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Appointment management :</div>
+                            <div class="value">700</div>
+                        </div>
+                        <div class="features-item">
+                            <div>Prescription Management :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Invoice & Receipt Management :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>My Schedule :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Notification Center :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Activity Logs :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Reports & Analytics :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Patient Limit :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h4>Staff Member limit</h4>
+                    <div class="staff-limit">
+                        <div class="features-item">
+                            <div>Doctor :</div>
+                            <div class="value">1</div>
+                        </div>
+                        <div class="features-item">
+                            <div>Nurse :</div>
+                            <div class="value">1</div>
+                        </div>
+                        <div class="features-item">
+                            <div>Receptionist :</div>
+                            <div class="value">1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h4>Support & Communication</h4>
+                    <div class="support">
+                        <div class="features-item">
+                            <div>Email Support :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Phone Support :</div>
+                            <div class="value">Yes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_3463_10108)">
+                                        <path d="M19.0759 2.68612C18.7871 2.39675 18.3184 2.39625 18.0295 2.68489L9.15121 11.5397L5.94796 8.06069C5.67117 7.76024 5.20319 7.74075 4.90224 8.0175C4.60152 8.29429 4.58227 8.7625 4.85906 9.06322L8.58406 13.1087C8.72048 13.2569 8.9114 13.343 9.11271 13.3472C9.11812 13.3474 9.12333 13.3474 9.12851 13.3474C9.32414 13.3474 9.51234 13.2697 9.65098 13.1316L19.0745 3.73279C19.3641 3.44419 19.3646 2.97548 19.0759 2.68612Z" fill="#027C59"/>
+                                        <path d="M18.8966 9.0781C18.4879 9.0781 18.1566 9.40938 18.1566 9.81818C18.1566 14.416 14.4163 18.1562 9.81855 18.1562C5.22103 18.1562 1.4805 14.416 1.4805 9.81818C1.4805 5.22066 5.22103 1.48013 9.81855 1.48013C10.2273 1.48013 10.5586 1.14884 10.5586 0.740084C10.5586 0.331287 10.2273 0 9.81855 0C4.40474 0 0.000366211 4.40438 0.000366211 9.81818C0.000366211 15.2318 4.40474 19.6364 9.81855 19.6364C15.2321 19.6364 19.6367 15.2318 19.6367 9.81818C19.6367 9.40942 19.3054 9.0781 18.8966 9.0781Z" fill="#027C59"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3463_10108">
+                                        <rect width="19.6364" height="19.6364" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="features-item">
+                            <div>Broadcast Messaging :</div>
+                            <div class="value">100 Messages / Month</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+
+
+
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        //       document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        //     toggle.addEventListener('click', function () {
+        //       const dropdown = this.closest('.dropdown');
+        //       dropdown.classList.toggle('open');
+        //     });
+        //   });
+    </script>
+</body>
+
+</html>

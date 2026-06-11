@@ -1,0 +1,53 @@
+.test-detail-box .info h2 {
+    margin-bottom: 40px;
+}
+
+.test-detail .test-detail-box .doctor-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 15px;
+    right: 24px;
+}
+
+.edit-btn {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.test-detail-box .edit-btn img {
+    width: 18px;
+    height: auto;
+}
+
+.test-detail-box .doctors__row:last-child {
+    margin-top: 32px;
+}

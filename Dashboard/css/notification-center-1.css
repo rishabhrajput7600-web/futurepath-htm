@@ -1,0 +1,310 @@
+.notification-center #tabs-nav {
+    margin: 30px 0;
+}
+
+.notification-center .notification-center-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification-center .doctor_appointment_row {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+}
+
+.notification-center .doctor_appointment_left {
+    width: 67px;
+}
+
+.notification-center-card .doctor_appointment_img {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #f1f8ff;
+    border: 1px solid #dadada;
+}
+.notification-center-card .doctor_appointment_img img {
+    width: 100%;
+}
+.notification-center-box .notification-center-card {
+    width: 100%;
+    border-radius: 12px;
+    background: var(--theme-white-color);
+    box-shadow: 2px 2px 28px 0 rgba(0, 0, 0, 0.1);
+    padding: 22px 36px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-center-text {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.notification-center-upgrade a {
+    color: #000;
+    text-decoration: none;
+}
+
+.doctor_accordion_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-right: 61px;
+}
+.doctor_accordion_left_heading h3 {
+    color: var(--Black-shades-black-100, #000);
+    font-size: 18px;
+    font-weight: 400;
+}
+.doctor_accordion_left_heading .doctor_timming {
+    color: var(--Black-shades-black-60, rgba(0, 0, 0, 0.6));
+    font-size: 16px;
+    font-weight: 500;
+}
+.doctor_accordion_row .doctor_accordion_left {
+    width: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.doctor_accordion_row .doctor_accordion_right {
+    width: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.doctor_accordion_inr.doctor_accordion_inr {
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+.doctor_appointment_img {
+    width: 63px;
+    height: 63px;
+}
+.left_icon_doctor {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.838vw;
+    padding: 15px;
+    border: 1.575px solid rgba(2, 82, 169, 0.09);
+    background: #e6eef6;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.left_icon_doctor img {
+    width: 100%;
+}
+.doctor_accordion_right .doctor_list_search {
+    display: flex;
+    gap: 0px 12px;
+}
+.doctor_list_search .card_button {
+    padding: 0px;
+    align-items: start;
+    justify-content: flex-start;
+    width: fit-content;
+}
+.card.card_button {
+    background: transparent;
+    box-shadow: none;
+    padding-right: 0;
+    display: flex;
+    /* justify-content: end; */
+    justify-content: end;
+    border: none;
+}
+.card.card_button button {
+    border-radius: 8px;
+    background: #0252a9;
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    flex-direction: row-reverse;
+}
+.card.card_button .blue_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #e6eef6;
+    color: #282828;
+}
+.card.card_button button .add_content {
+    width: 90%;
+    line-height: normal;
+}
+.card.card_button .blue_button_01 .add_icon {
+    width: 22px;
+    height: 22px;
+}
+.add_icon img {
+    width: 100%;
+}
+.card.card_button .white_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    color: #282828;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 14px;
+}
+.card.card_button .red_button_01 {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f6e6e6;
+    color: #c80a0a;
+}
+
+/* .doctor_accordion_row::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 1px;
+    height: 43px;
+    background: rgba(0, 0, 0, 0.20);
+    right: 4%;
+    transform: translateY(-50%);
+} */
+.doctor_accordion_header {
+    position: relative;
+}
+.accordion_icon_img {
+    width: 43px;
+    height: 43px;
+    border-radius: 100%;
+    background: #e6eef6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.accordion_header_icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.doctor_accordion_inr.active .accordion_icon_img {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.doctor_accordion_inr {
+    cursor: pointer;
+}
+.left_icon_doctor.green_icon_bg {
+    background: #e6fcf6;
+}
+.left_icon_doctor.red_icon_bg {
+    background: #f5d6d6;
+}
+.accordion_content table tr td:first-child {
+    width: 25%;
+}
+.accordion_content table tr td:last-child {
+    width: 65%;
+}
+.accordion_content {
+    padding-top: 10px;
+    display: none;
+}
+.doctor_accordion_inr.active .accordion_content {
+    display: block;
+}
+.accordion_content table tr th h3 {
+    color: var(--Black-shades-black-100, #000);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+.accordion_content table tr td span {
+    font-weight: 500;
+}
+.accordion_content table tr td {
+    color: var(--Black-shades-black-60, rgba(0, 0, 0, 0.6));
+    font-weight: 500;
+}
+.notification-center-upgrade a {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #282828;
+}
+
+@media (max-width: 1600px) {
+    .card.card_button .add_content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .notification-center .notification-center-tabs {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .notification-center-box .notification-center-card {
+        gap: 20px;
+        align-items: self-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .notification-center-tabs #tabs-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .notification-center-tabs #tabs-nav a {
+        padding: 9px 10px;
+        font-size: 16px;
+    }
+    .notification-center-tabs .doctor_list_right {
+        width: 100%;
+    }
+    .notification-center-box .notification-center-card {
+        padding: 15px 15px;
+    }
+}

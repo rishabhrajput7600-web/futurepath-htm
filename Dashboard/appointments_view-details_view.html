@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   <!-- <link href="css/bootstrap_custom.css" rel="stylesheet" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/new-appointment.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/appointments_view_details.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/form.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+
+  <title>Document</title>
+  <style>
+
+ 
+ 
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section doctor_list_section user-management-list">
+    <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="home_section_box view_details_screen">
+      <div class="doctor_list_top">
+        <div class="doctor_list_row">
+          <div class="doctor_list_left">
+            <div class="doctor_list_contnet">
+              <ul class="breadcrumb">
+                <li>Appointments</li>
+                <li>
+                  <a href="#">View details</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="doctor_list_right">
+            <div class="doctor_list_search">
+              <div class="card card_button">
+                <button class="blue_button_01">
+                  <span class="add_content">Reschedule</span>
+                  <span class="add_icon">
+                    <img src="images/appointments-img/reschedule.svg" alt="" srcset="">
+                  </span>
+                </button>
+              </div>
+              <div class="card card_button">
+                <button class="red_button_01">
+                  <span class="add_content">Cancel Appointment</span>
+                  <span class="add_icon">
+                    <img src="images/appointments-img/cancel.svg" alt="" srcset="">
+                  </span>
+                </button>
+              </div>
+              <div class="card card_button">
+                <button class="gray_button_01">
+                  <span class="add_content">Mark As Completed</span>
+                  <span class="add_icon">
+                    <img src="images/appointments-img/mark.svg" alt="" srcset="">
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="management_user_detail_box">
+        <div class="doctor-profile">
+          <div class="info">
+            <h2>Arjun Verma</h2>
+            <p>
+              <strong>Patient ID: 123456c</strong>
+            </p>
+            <div class="contact">
+              <p>
+                <span class="super_img">
+                  <img src="images/my_ profile/phone_icon.svg" alt="" srcset="">
+                </span>
+                <span class="super_content"> Male, 31 yrs</span>
+              </p>
+              <p>
+                <span class="super_img">
+                  <img src="images/my_ profile/email_icon.svg" alt="" srcset="">
+                </span>
+                <span class="super_content">0123456789</span>
+              </p>
+              <p>
+                <span class="super_content super_img">
+                  BG
+                </span>
+                <span class="super_content">: O+</span>
+              </p>
+            </div>
+          </div>
+          <div class="basic-plan">
+            <button class="save-btn">View Details</button>
+          </div>
+        </div>
+      </div>
+      <section class="current_appointment">
+        <div class="appointment-card">
+          <h4 class="section-title">Appointment Completed Details</h4>
+          <div class="appointment-details">
+            <div class="detail-item">
+              <p class="label">Date & Time</p>
+              <p class="value">15/09/2025 10:30 AM</p>
+            </div>
+            <div class="detail-item">
+              <p class="label">Appointment ID</p>
+              <p class="value">APT-2024-002</p>
+            </div>
+            <div class="detail-item">
+              <p class="label">Appointment Type</p>
+              <p class="value">
+                <span class="value_img">
+                  <img src="images/profile_icon_red.svg" alt="" srcset="">
+                </span>
+                <strong>Online</strong>
+              </p>
+            </div>
+            <div class="detail-item">
+              <p class="label">Status</p>
+              <span class="status-badge scheduled">
+                <img src="images/completed_icon.svg" alt="" srcset="">
+               Completed
+              </span>
+            </div>
+            <div class="detail-item">
+              <p class="label">Visit Type</p>
+              <span class="visit-type">Follow-up</span>
+            </div>
+            <div class="detail-item">
+              <p class="label">Payment Status:</p>
+              <span class="payment-status unpaid">
+                 Paid
+              </span>
+            </div>
+          </div>
+        </div>
+        <hr>
+      
+
+ <div class="health_vitals_section">
+        <h3>Health Vitals</h3>
+        <div class="table-responsive">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+      <th>Weight (kg)</th>
+      <th>Height </th>
+      <th>Body Temprature </th>
+      <th>BP</th>
+      <th>Pulse Rate (BPM)</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+    
+      <tr>
+        <td>80</td>
+        <td>165cm</td>
+        <td>98.6°F	</td>
+        <td>120 / 80 mmHg</td>
+        <td>76</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      </div>
+
+         <hr>
+
+         <div class="prescription_box">
+           
+            <h4>Appointment Summary</h4>
+          <p>Patient presented with mild fever, body ache, and fatigue. No signs of infection. Vitals stable. Suspected viral flu.</p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Medicine</th>
+                <th>Dosage</th>
+                <th>Duration</th>
+                <th>Notes</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+               <tr>
+                <td>Paracetamol 500 mg	</td>
+                <td>Before Breakfast, Before Lunch, Before Dinner</td>
+                <td>7 Days	</td>
+                <td>Take with water, monitor temp</td>
+                </tr>
+
+              <tr>
+              </tr>
+              
+              <tr>
+                <td>Cetirizine 10 mg	</td>
+                <td>After Dinner	</td>
+                <td>5 Days	</td>
+                <td>For allergy relief, may cause drowsiness</td>
+              
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      
+         </div>
+
+         <hr>
+
+         <div class="test_required_box test_required_box appointments_view_box">
+            <h3>Test Required (optional)</h3>
+           
+            <div class="permissions">
+              <div class="permission-tag tag-gray">Test Name 1
+               </div>
+              <div class="permission-tag tag-gray">Test Name 2
+                 
+              </div>
+              <div class="permission-tag tag-gray">Test Name 3
+               
+              </div>
+            </div>
+          </div>
+
+        
+
+          <div class="reports_box">
+              <div class="reports_list">
+                <div class="reports_list_box">
+                  <div class="reports_left">
+                    <div class="reports_content">
+                      <div class="date_box">
+                        10-09-2025
+                      </div>
+                      <div class="pfd_box">
+                        <div class="pdf_icon">
+                          <img src="images/pdf_icon.png" alt="" srcset="">
+                        </div>
+                        <div class="pdf_content">
+                          Peak_Flow_Readings_Jan2024.pdf
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reports_right">
+                    <div class="notes-box">
+                      <div class="eye_box">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <g clip-path="url(#clip0_1_3913)">
+                              <path d="M12.5769 20C4.72572 20 0.833217 13.1555 0.671404 12.8643C0.545404 12.6376 0.545404 12.3622 0.671404 12.1355C0.833217 11.8445 4.72572 5 12.5769 5C20.4281 5 24.3206 11.8445 24.4824 12.1357C24.6084 12.3624 24.6084 12.6378 24.4824 12.8645C24.3206 13.1555 20.4281 20 12.5769 20ZM2.20947 12.4989C3.10159 13.8509 6.60428 18.5 12.5769 18.5C18.5685 18.5 22.0556 13.8547 22.9443 12.5011C22.0522 11.1491 18.5495 6.5 12.5769 6.5C6.58534 6.5 3.09822 11.1453 2.20947 12.4989ZM12.5769 17C10.0955 17 8.0769 14.9814 8.0769 12.5C8.0769 10.0186 10.0955 8 12.5769 8C15.0583 8 17.0769 10.0186 17.0769 12.5C17.0769 14.9814 15.0583 17 12.5769 17ZM12.5769 9.5C10.9228 9.5 9.5769 10.8459 9.5769 12.5C9.5769 14.1541 10.9228 15.5 12.5769 15.5C14.231 15.5 15.5769 14.1541 15.5769 12.5C15.5769 10.8459 14.231 9.5 12.5769 9.5Z" fill="#0252A9"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1_3913">
+                                <rect width="24" height="24" fill="white" transform="translate(0.576904 0.5)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="eye_box">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M18.9519 17.1248H3.2019C2.96984 17.1248 2.74728 17.2169 2.58319 17.381C2.41909 17.5451 2.3269 17.7677 2.3269 17.9998C2.3269 18.2318 2.41909 18.4544 2.58319 18.6185C2.74728 18.7826 2.96984 18.8748 3.2019 18.8748H18.9519C19.184 18.8748 19.4065 18.7826 19.5706 18.6185C19.7347 18.4544 19.8269 18.2318 19.8269 17.9998C19.8269 17.7677 19.7347 17.5451 19.5706 17.381C19.4065 17.2169 19.184 17.1248 18.9519 17.1248Z" fill="#024B9A"></path>
+                            <path d="M11.0768 2.25024C10.8448 2.25024 10.6222 2.34243 10.4581 2.50653C10.294 2.67062 10.2018 2.89318 10.2018 3.12524V12.3915L7.32307 9.50399C7.15831 9.33923 6.93484 9.24666 6.70182 9.24666C6.46881 9.24667 6.24534 9.33923 6.08057 9.50399C5.91581 9.66876 5.82324 9.89223 5.82324 10.1252C5.82324 10.3583 5.91581 10.5817 6.08057 10.7465L10.4556 15.1215C10.5369 15.2035 10.6337 15.2686 10.7403 15.313C10.8469 15.3574 10.9613 15.3803 11.0768 15.3803C11.1923 15.3803 11.3067 15.3574 11.4133 15.313C11.52 15.2686 11.6167 15.2035 11.6981 15.1215L16.0731 10.7465C16.1547 10.6649 16.2194 10.5681 16.2635 10.4615C16.3077 10.3549 16.3304 10.2406 16.3304 10.1252C16.3304 10.0099 16.3077 9.89562 16.2635 9.78903C16.2194 9.68243 16.1547 9.58558 16.0731 9.50399C15.9915 9.42241 15.8946 9.3577 15.788 9.31354C15.6814 9.26939 15.5672 9.24666 15.4518 9.24666C15.3364 9.24666 15.2222 9.26939 15.1156 9.31354C15.009 9.3577 14.9122 9.42241 14.8306 9.50399L11.9518 12.3915V3.12524C11.9518 2.89318 11.8596 2.67062 11.6955 2.50653C11.5314 2.34243 11.3089 2.25024 11.0768 2.25024Z" fill="#024B9A"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <button class="medicine_slide_btn">
+                        <span class="pan-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                            <path d="M3.52654 11.5806C3.39054 11.5806 3.25481 11.5288 3.15095 11.4249C2.9435 11.2175 2.9435 10.8812 3.15095 10.6737L11.4528 2.3719C11.66 2.16445 11.9965 2.16445 12.204 2.3719C12.4114 2.57935 12.4114 2.91563 12.204 3.12309L3.90214 11.4249C3.79855 11.5285 3.66254 11.5806 3.52654 11.5806Z" fill="black"></path>
+                            <path d="M2.70634 15.4059C2.66942 15.4059 2.63197 15.4019 2.59451 15.3939C2.30764 15.3323 2.12489 15.0499 2.18651 14.763L3.00729 10.9373C3.06892 10.6504 3.35261 10.4682 3.63815 10.5293C3.92503 10.5909 4.10778 10.8732 4.04615 11.1601L3.22537 14.9859C3.17198 15.2353 2.95151 15.4059 2.70634 15.4059Z" fill="black"></path>
+                            <path d="M6.53167 14.5854C6.39567 14.5854 6.25994 14.5337 6.15608 14.4298C5.94862 14.2223 5.94862 13.8861 6.15608 13.6786L14.4579 5.37703C14.6651 5.16957 15.0017 5.16957 15.2091 5.37703C15.4166 5.58448 15.4166 5.92076 15.2091 6.12821L6.90753 14.4298C6.80367 14.5337 6.66767 14.5854 6.53167 14.5854Z" fill="black"></path>
+                            <path d="M2.70547 15.4064C2.46029 15.4064 2.24009 15.2358 2.18643 14.9864C2.12508 14.6995 2.30756 14.4172 2.59443 14.3556L6.42023 13.5348C6.70737 13.4739 6.98973 13.6562 7.05109 13.9428C7.11245 14.2297 6.92997 14.512 6.64309 14.5736L2.81729 15.3944C2.77984 15.4027 2.74239 15.4064 2.70547 15.4064Z" fill="black"></path>
+                            <path d="M13.3309 7.7862C13.1949 7.7862 13.0589 7.7344 12.9553 7.63054L9.95027 4.62553C9.74281 4.41807 9.74281 4.08179 9.95027 3.87434C10.1575 3.66689 10.4943 3.66689 10.7015 3.87434L13.7065 6.87936C13.9139 7.08681 13.9139 7.42309 13.7065 7.63054C13.6029 7.7344 13.4669 7.7862 13.3309 7.7862Z" fill="black"></path>
+                            <path d="M14.8336 6.28396C14.6976 6.28396 14.5616 6.23216 14.4577 6.1283C14.2503 5.92085 14.2503 5.58457 14.4577 5.37685C14.7534 5.08121 14.9162 4.68091 14.9162 4.25007C14.9162 3.81922 14.7534 3.41893 14.4577 3.12329C14.1618 2.82738 13.7615 2.66455 13.3307 2.66455C12.8999 2.66455 12.4996 2.82738 12.2039 3.12329C11.9967 3.33074 11.6604 3.331 11.4525 3.12329C11.245 2.91583 11.245 2.57955 11.4525 2.37183C11.9487 1.87538 12.6156 1.60205 13.3307 1.60205C14.0455 1.60205 14.7127 1.87538 15.2089 2.37183C15.7054 2.86802 15.9787 3.535 15.9787 4.25007C15.9787 4.96513 15.7054 5.63211 15.2089 6.1283C15.1056 6.23189 14.9696 6.28396 14.8336 6.28396Z" fill="black"></path>
+                          </svg>
+                        </span>
+                        <span class="btn-content">View Notes</span>
+                        <span class="down_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <path d="M6.28846 6.61541C6.42125 6.61541 6.55417 6.56466 6.65555 6.46328L11.8478 1.271C12.0507 1.06811 12.0507 0.739568 11.8478 0.53681C11.6449 0.334051 11.3164 0.333922 11.1136 0.53681L6.28846 5.362L1.46327 0.536811C1.26038 0.333922 0.931841 0.333922 0.729082 0.536811C0.526324 0.739699 0.526195 1.06824 0.729082 1.271L5.92136 6.46328C6.02274 6.56466 6.15567 6.61541 6.28846 6.61541Z" fill="#282828"></path>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="medicine_bottom_textarea slideDown">
+                  <textarea name="" id="" placeholder="Lorem ipsum dolor sit amet consectetur. Velit blandit a ipsum velit felis nunc. nam lacus velit aliquam mauris."></textarea>
+                </div>
+              </div>
+              <div class="reports_list">
+                <div class="reports_list_box">
+                  <div class="reports_left">
+                    <div class="reports_content">
+                      <div class="date_box">
+                        10-09-2025
+                      </div>
+                      <div class="pfd_box">
+                        <div class="pdf_icon">
+                          <img src="images/pdf_icon.png" alt="" srcset="">
+                        </div>
+                        <div class="pdf_content">
+                          Peak_Flow_Readings_Jan2024.pdf
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reports_right">
+                    <div class="notes-box">
+                      <div class="eye_box">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <g clip-path="url(#clip0_1_3913)">
+                              <path d="M12.5769 20C4.72572 20 0.833217 13.1555 0.671404 12.8643C0.545404 12.6376 0.545404 12.3622 0.671404 12.1355C0.833217 11.8445 4.72572 5 12.5769 5C20.4281 5 24.3206 11.8445 24.4824 12.1357C24.6084 12.3624 24.6084 12.6378 24.4824 12.8645C24.3206 13.1555 20.4281 20 12.5769 20ZM2.20947 12.4989C3.10159 13.8509 6.60428 18.5 12.5769 18.5C18.5685 18.5 22.0556 13.8547 22.9443 12.5011C22.0522 11.1491 18.5495 6.5 12.5769 6.5C6.58534 6.5 3.09822 11.1453 2.20947 12.4989ZM12.5769 17C10.0955 17 8.0769 14.9814 8.0769 12.5C8.0769 10.0186 10.0955 8 12.5769 8C15.0583 8 17.0769 10.0186 17.0769 12.5C17.0769 14.9814 15.0583 17 12.5769 17ZM12.5769 9.5C10.9228 9.5 9.5769 10.8459 9.5769 12.5C9.5769 14.1541 10.9228 15.5 12.5769 15.5C14.231 15.5 15.5769 14.1541 15.5769 12.5C15.5769 10.8459 14.231 9.5 12.5769 9.5Z" fill="#0252A9"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1_3913">
+                                <rect width="24" height="24" fill="white" transform="translate(0.576904 0.5)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="eye_box">
+                        <button>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M18.9519 17.1248H3.2019C2.96984 17.1248 2.74728 17.2169 2.58319 17.381C2.41909 17.5451 2.3269 17.7677 2.3269 17.9998C2.3269 18.2318 2.41909 18.4544 2.58319 18.6185C2.74728 18.7826 2.96984 18.8748 3.2019 18.8748H18.9519C19.184 18.8748 19.4065 18.7826 19.5706 18.6185C19.7347 18.4544 19.8269 18.2318 19.8269 17.9998C19.8269 17.7677 19.7347 17.5451 19.5706 17.381C19.4065 17.2169 19.184 17.1248 18.9519 17.1248Z" fill="#024B9A"></path>
+                            <path d="M11.0768 2.25024C10.8448 2.25024 10.6222 2.34243 10.4581 2.50653C10.294 2.67062 10.2018 2.89318 10.2018 3.12524V12.3915L7.32307 9.50399C7.15831 9.33923 6.93484 9.24666 6.70182 9.24666C6.46881 9.24667 6.24534 9.33923 6.08057 9.50399C5.91581 9.66876 5.82324 9.89223 5.82324 10.1252C5.82324 10.3583 5.91581 10.5817 6.08057 10.7465L10.4556 15.1215C10.5369 15.2035 10.6337 15.2686 10.7403 15.313C10.8469 15.3574 10.9613 15.3803 11.0768 15.3803C11.1923 15.3803 11.3067 15.3574 11.4133 15.313C11.52 15.2686 11.6167 15.2035 11.6981 15.1215L16.0731 10.7465C16.1547 10.6649 16.2194 10.5681 16.2635 10.4615C16.3077 10.3549 16.3304 10.2406 16.3304 10.1252C16.3304 10.0099 16.3077 9.89562 16.2635 9.78903C16.2194 9.68243 16.1547 9.58558 16.0731 9.50399C15.9915 9.42241 15.8946 9.3577 15.788 9.31354C15.6814 9.26939 15.5672 9.24666 15.4518 9.24666C15.3364 9.24666 15.2222 9.26939 15.1156 9.31354C15.009 9.3577 14.9122 9.42241 14.8306 9.50399L11.9518 12.3915V3.12524C11.9518 2.89318 11.8596 2.67062 11.6955 2.50653C11.5314 2.34243 11.3089 2.25024 11.0768 2.25024Z" fill="#024B9A"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <button class="medicine_slide_btn">
+                        <span class="pan-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                            <path d="M3.52654 11.5806C3.39054 11.5806 3.25481 11.5288 3.15095 11.4249C2.9435 11.2175 2.9435 10.8812 3.15095 10.6737L11.4528 2.3719C11.66 2.16445 11.9965 2.16445 12.204 2.3719C12.4114 2.57935 12.4114 2.91563 12.204 3.12309L3.90214 11.4249C3.79855 11.5285 3.66254 11.5806 3.52654 11.5806Z" fill="black"></path>
+                            <path d="M2.70634 15.4059C2.66942 15.4059 2.63197 15.4019 2.59451 15.3939C2.30764 15.3323 2.12489 15.0499 2.18651 14.763L3.00729 10.9373C3.06892 10.6504 3.35261 10.4682 3.63815 10.5293C3.92503 10.5909 4.10778 10.8732 4.04615 11.1601L3.22537 14.9859C3.17198 15.2353 2.95151 15.4059 2.70634 15.4059Z" fill="black"></path>
+                            <path d="M6.53167 14.5854C6.39567 14.5854 6.25994 14.5337 6.15608 14.4298C5.94862 14.2223 5.94862 13.8861 6.15608 13.6786L14.4579 5.37703C14.6651 5.16957 15.0017 5.16957 15.2091 5.37703C15.4166 5.58448 15.4166 5.92076 15.2091 6.12821L6.90753 14.4298C6.80367 14.5337 6.66767 14.5854 6.53167 14.5854Z" fill="black"></path>
+                            <path d="M2.70547 15.4064C2.46029 15.4064 2.24009 15.2358 2.18643 14.9864C2.12508 14.6995 2.30756 14.4172 2.59443 14.3556L6.42023 13.5348C6.70737 13.4739 6.98973 13.6562 7.05109 13.9428C7.11245 14.2297 6.92997 14.512 6.64309 14.5736L2.81729 15.3944C2.77984 15.4027 2.74239 15.4064 2.70547 15.4064Z" fill="black"></path>
+                            <path d="M13.3309 7.7862C13.1949 7.7862 13.0589 7.7344 12.9553 7.63054L9.95027 4.62553C9.74281 4.41807 9.74281 4.08179 9.95027 3.87434C10.1575 3.66689 10.4943 3.66689 10.7015 3.87434L13.7065 6.87936C13.9139 7.08681 13.9139 7.42309 13.7065 7.63054C13.6029 7.7344 13.4669 7.7862 13.3309 7.7862Z" fill="black"></path>
+                            <path d="M14.8336 6.28396C14.6976 6.28396 14.5616 6.23216 14.4577 6.1283C14.2503 5.92085 14.2503 5.58457 14.4577 5.37685C14.7534 5.08121 14.9162 4.68091 14.9162 4.25007C14.9162 3.81922 14.7534 3.41893 14.4577 3.12329C14.1618 2.82738 13.7615 2.66455 13.3307 2.66455C12.8999 2.66455 12.4996 2.82738 12.2039 3.12329C11.9967 3.33074 11.6604 3.331 11.4525 3.12329C11.245 2.91583 11.245 2.57955 11.4525 2.37183C11.9487 1.87538 12.6156 1.60205 13.3307 1.60205C14.0455 1.60205 14.7127 1.87538 15.2089 2.37183C15.7054 2.86802 15.9787 3.535 15.9787 4.25007C15.9787 4.96513 15.7054 5.63211 15.2089 6.1283C15.1056 6.23189 14.9696 6.28396 14.8336 6.28396Z" fill="black"></path>
+                          </svg>
+                        </span>
+                        <span class="btn-content">View Notes</span>
+                        <span class="down_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <path d="M6.28846 6.61541C6.42125 6.61541 6.55417 6.56466 6.65555 6.46328L11.8478 1.271C12.0507 1.06811 12.0507 0.739568 11.8478 0.53681C11.6449 0.334051 11.3164 0.333922 11.1136 0.53681L6.28846 5.362L1.46327 0.536811C1.26038 0.333922 0.931841 0.333922 0.729082 0.536811C0.526324 0.739699 0.526195 1.06824 0.729082 1.271L5.92136 6.46328C6.02274 6.56466 6.15567 6.61541 6.28846 6.61541Z" fill="#282828"></path>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="medicine_bottom_textarea slideDown">
+                  <textarea name="" id="" placeholder="Lorem ipsum dolor sit amet consectetur. Velit blandit a ipsum velit felis nunc. nam lacus velit aliquam mauris."></textarea>
+                </div>
+              </div>
+
+            </div>
+
+              <div class="invoice-box">
+          <h2>Billing & Invoice</h2>
+          <div class="invoice_bg">
+<div class="items-header">
+            <span>Items</span>
+            <span>Amount</span>
+          </div>
+          <div class="item-row">
+            <span>Consultation Fee</span>
+            <span>₹250.00</span>
+          </div>
+          <div class="item-row">
+            <span>ECG</span>
+            <span>₹120.00</span>
+          </div>
+          </div>
+          
+
+          <hr>
+   <div class="total-section">
+            <span class="total-title">Total</span>
+            <span class="total-amount">₹370.00</span>
+          </div>
+
+          <div style="clear: both;"></div>
+
+          <div class="payment_type">
+            <div class="payment-type">Payment Type</div>
+            <div class="payment-method">Credit Card</div>
+          </div>
+
+          <div class="save-btn_box">
+            <div class="group-btn">
+               <button class="save-btn disabled">View Invoice</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+     
+ 
+    </div>
+
+    </div>
+
+
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function () {
+    const dropdown = this.closest('.dropdown');
+    dropdown.classList.toggle('open');
+            });
+          });
+      (function ($) {
+      $(document).ready(function() {
+        const $optionMenu = $(".select-menu"),
+          $selectBtn = $optionMenu.find(".select-btn"),
+          $options = $optionMenu.find(".option"),
+          $sBtn_text = $optionMenu.find(".sBtn-text");
+        $selectBtn.on("click", function() {
+          $optionMenu.toggleClass("active");
+        });
+        $options.on("click", function() {
+          let selectedOption = $(this).find(".option-text").text();
+          $sBtn_text.text(selectedOption);
+          $optionMenu.removeClass("active");
+        });
+      });
+    })(jQuery);
+    
+    // $(".medicine_slide_btn").click(function(){
+    //   $(".medicine_bottom_textarea").slideDown();
+    // });
+    
+    //  $(document).ready(function(){
+    //     $(".medicine_slide_btn").click(function(){
+    //         $(".medicine_bottom_textarea").toggleClass("slideDown");
+    //         this(".medicine_slide_btn").addClass(active)
+    //     });
+    // });
+    
+    $(document).ready(function() {
+    $(".medicine_slide_btn").click(function() {
+        $(".medicine_bottom_textarea").toggleClass("slideDown");
+        $(".medicine_slide_btn").removeClass("active"); // remove from others
+        $(this).addClass("active"); // add to clicked one
+    });
+    });
+      
+      $("button#toggle").click(function(){
+      $("p#highlight").toggleClass("primary-text");
+      });
+  </script>
+</body>
+
+</html>

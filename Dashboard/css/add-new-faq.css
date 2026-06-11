@@ -1,0 +1,20 @@
+.new_faq_inner {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    gap: 42px;
+}
+
+.new_faq_left {
+    width: 48%;
+}
+
+.new_faq_center {
+    width: 2%;
+    height: 100%;
+    margin: auto 0;
+}
+
+.new_faq_right {
+    width: 45%;
+}

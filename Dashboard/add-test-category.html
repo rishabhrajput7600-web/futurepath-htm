@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Add Test Category</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="css/bootstrap_custom.css" rel="stylesheet" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/clinic-details.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/form.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/add-faq-category.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+  <style>
+    .upload_photo_box .upload_photo {
+      padding: 0px;
+    }
+
+    .edit_doctor_profile .registration_section .appointment_screen h3 {
+      margin-bottom: 15px;
+    }
+
+    .edit_doctor_profile .contact-fome h5 {
+      margin-bottom: 16px;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .edit_doctor_profile .save-btn_box {
+      margin-top: 34px;
+    }
+
+    .create_patient_sec .select-menu .select-btn {
+      background: #f3f5f7;
+      padding: 8px 20px;
+    }
+
+    .create_patient_sec .new-appointment .select-btn .sBtn-text {
+      color: rgba(0, 0, 0, 0.60);
+    }
+
+    .create_patient_sec .select_box {
+      margin-top: 0;
+    }
+
+    .create_patient_sec .input_deta.input_deta_box h3 {
+      margin-bottom: 0;
+    }
+
+    .create_patient_sec .input_deta.input_deta_box {
+      margin-bottom: 0;
+    }
+    
+
+    .add-test-category .form-control {
+      background: #F3F5F7;
+    }
+
+    .add-test-category h3 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section create-user-management create_patient_sec">
+    <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_section_box management_user_detail edit_doctor_profile">
+
+      <ul class="breadcrumb">
+        <li>Tests</li>
+        <li><a href="#">Add Test Category</a></li>
+      </ul>
+
+
+      <!-- <div class="doctor_list_top">
+        <div class="doctor_list_row">
+          <div class="doctor_list_left">
+            <div class="doctor_list_contnet">
+              <h1>Doctor Profile</h1>
+            </div>
+          </div>
+          
+        </div>
+      </div> -->
+      <section class="registration_section add-faq-category add-test-category">
+        <div class="contact-fome">
+          <div class="doctor_registration_box">
+            <h1>Create Test Category</h1>
+          </div>
+
+
+        
+        <h3>Category Name</h3>
+        <div class="add-faq-text-category">
+          <div class="input_deta add-faq-text-category">
+            <input id="content-" class="form-control" type="text" placeholder="Enter Category Name">
+          </div>
+        </div>
+
+
+        <h3>Description</h3>
+        <div class="add-faq-text-category">
+          <div class="input_deta add-faq-text-category">
+            <textarea id="content-" class="form-control" placeholder="A brief description of the test"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+
+        <div class="save-btn_box">
+          <div class="group-btn">
+            <button class="save-btn">Create Test Category</button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+        </div>
+
+
+        <!-- <div class="pagination registration_pagination">
+          <a href="#"><span><img src="images/prev.png" alt="" srcset=""></span> Prev</a>
+          <a class="active" href="#">Next <span><img src="images/next.png" alt="" srcset=""></span></a>
+        </div> -->
+      </section>
+
+
+      
+    </div>
+
+    </div>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

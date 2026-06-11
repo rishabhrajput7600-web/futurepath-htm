@@ -1,0 +1,16 @@
+.subscription_plan_management .subscription_plan_princing {
+    display: inline-block;
+}
+
+.subscription_plan_off {
+    border-radius: 4px;
+    background: var(--Green-green-100, #B1F6E2);
+    padding: 3px 7px;
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.subscription_plan_strike {
+    color: rgba(0, 0, 0, 0.60);
+}

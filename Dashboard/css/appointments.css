@@ -1,0 +1,167 @@
+.appointment-scheduled {
+    border-radius: 4px;
+    background: #E6EEF6;
+    padding: 4px 12px;
+    color: #012D5D;
+}
+.staf_management .appointment-scheduled{
+    background: #E6EEF6 !important;
+    color: #000;
+}
+
+.appointment-completed {
+    border-radius: 4px;
+    background: #E6FCF6;
+    padding: 2px 12px;
+    color: #015F44;
+}
+
+.appointment-rescheduled {
+    border-radius: 4px;
+    background: #F2F6E6;
+    padding: 2px 12px;
+    color: #38411B;
+}
+
+.appointment-canceled {
+    border-radius: 4px;
+    background: rgba(255, 107, 74, 0.10);
+    padding: 2px 12px;
+    color: #C81212;
+}
+
+.appointments-list .visit-type {
+    color: rgba(0, 0, 0, 0.80);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    padding: 2px 16px;
+}
+
+.appointments-list tbody .table_border td {
+    background: #f3f5f7;
+}
+
+
+.appointments-list .payment-paid {
+    color: #02A073;
+    position: relative;
+}
+
+.appointments-list .payment-paid::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -12px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    background: #02A073;
+    border-radius: 100px;
+}
+
+.appointments-list .payment-free {
+    color: #0252A9;
+    position: relative;
+}
+
+.appointments-list .payment-free::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -12px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    background: #0252A9;
+    border-radius: 100px;
+}
+
+.appointments-list .payment-unpaid {
+    color: #C81212;
+    position: relative;
+}
+
+.appointments-list .payment-unpaid::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -12px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    background: #C81212;
+    border-radius: 100px;
+}
+
+.appointments-list tbody tr td {
+    border: none !important;
+    background: #FFF;
+    border-radius: 0;
+}
+ .date_section .month-display {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider_arrow {
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      user-select: none;
+      color: #0047AB;
+    }
+
+    .date-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+    }
+    .date_box{
+        gap: 20px;
+      padding: 10px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      scrollbar-width: none;
+     width: 100%;
+    }
+
+    .date-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .date.active {
+      background-color: #0047AB;
+      color: white;
+    }
+
+    .day {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .number {
+      font-size: 16px;
+    }

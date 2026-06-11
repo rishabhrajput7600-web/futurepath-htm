@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Add Medicine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="css/bootstrap_custom.css" rel="stylesheet" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/clinic-details.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/form.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/add-faq-category.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/add-medicine.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+  <style>
+ 
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section create-user-management create_staff_screen">
+   <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <section class="registration_section add-medicine">
+      <div class="home_section_box view_details_screen">
+        <ul class="breadcrumb">
+          <li>Medicine Management</li>
+          <li><a href="#">Add Medicine</a></li>
+        </ul>
+
+        <div class="contact-fome">
+          <h1>Create Medicine</h1>
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Code</h3>
+                <input id="content-" class="form-control" type="text" placeholder="Enter User name">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <div class="input_deta">
+                <h3>Product Name</h3>
+                <input class="form-control" type="text " placeholder="Enter Email Id">
+
+              </div>
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <!-- <div class="input_deta">
+                <h3>Unit</h3>
+                <input class="form-control" type="text " placeholder="Enter Phone No">
+
+              </div> -->
+              <div class="appointment_box input_deta">
+                      <h3>Unit</h3>
+                             <div class="select-menu">
+  <div class="select-btn">
+    <span class="sBtn-text">Unit</span>
+    <i class="bx bx-chevron-down"></i>
+  </div>
+
+  <ul class="options">
+    <li class="option">
+       <span class="option-text">Unit1</span>
+    </li>
+    <li class="option">
+        <span class="option-text">Unit2</span>
+    </li>
+    <li class="option">
+        <span class="option-text">Unit3</span>
+    </li>
+    
+ 
+  </ul>
+                    </div>
+                        </div>
+            </div>
+
+              <div class="col-md-12 col-sm-12">
+              <div class="save-btn_box">
+                <button class="save-btn">Create Medicine</button>
+              </div>
+              </div>
+
+          </div>
+        </div>
+
+        <span class="add-medicine-brk">OR</span>
+
+        <div class="add-medicine-upload">
+          <h3>Bulk Add Medicines Instantly via CSV (File Added)</h3>
+          <div class="attach-doc-box">
+            <div class="attach-doc-info">
+              <img src="images/upload-file-icon.png" alt="">
+              <a href="#">Medicine_export.csv</a>
+            </div>
+            <button class="replace-btn">Replace File</button>
+          </div>
+          <div class="bottom-row">
+            <a href="#">Download sample CSV</a>
+            <button class="attach-doc-btn">Upload CSV</button>
+          </div>
+        </div>
+
+        <span class="add-medicine-brk">OR</span>
+
+        <div class="add-medicine-upload">
+          <h3>Bulk Add Test Instantly via CSV</h3>
+          <div class="upload-box">
+            <div class="upload-icon">
+              <img src="images/download-icon.svg" alt="">
+            </div>
+            <p>Kindly add a file or drag & drop CSV file</p>
+            <button class="add-file-btn">+ Add File</button>
+          </div>
+          <div class="bottom-row">
+            <a href="#">Download sample CSV</a>
+            <button class="upload-btn">Upload CSV</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+   
+
+  </script>
+</body>
+
+</html>

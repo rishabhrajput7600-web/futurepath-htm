@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Patient List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="css/custom-style.css">
+        <link
+            rel="stylesheet"
+            href="css/fonts.css"
+            rel="stylesheet"
+            type="text/css"
+        >
+        <link
+            rel="stylesheet"
+            href="css/style.css"
+            rel="stylesheet"
+            type="text/css"
+        >
+        <link
+            rel="stylesheet"
+            href="css/my_profile.css"
+            rel="stylesheet"
+            type="text/css"
+        >
+        <link  rel="stylesheet"
+            href="css/doctor_list.css"
+            rel="stylesheet"
+            type="text/css"
+        >
+        <title>Document</title>
+        <style>
+            .patient_list_sec .top-cards_revenue {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+
+            .patient_list_row_left h3 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .patient_list_row_left span {
+                font-size: 24px;
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.60);
+            }
+
+            .patient_list_sec .total_revenue_img {
+                width: 8%;
+            }
+
+            .patient_list_sec .total_revenue {
+                padding: 24px;
+            }
+
+            @media screen and (max-width: 1199px) {
+                .patient_list_sec .total_revenue_img {
+                    width: 14%;
+                }
+                .patient_list_row_left h3 {
+                    font-size: 22px;
+                }
+                .patient_list_row_left span {
+                    font-size: 22px;
+                }
+            }
+
+            @media screen and (max-width: 767px) {
+                .patient_list_sec .top-cards_revenue {
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 15px;
+                }
+                .patient_list_sec .total_revenue_img {
+                    width: 10%;
+                }
+                .patient_list_sec .total_revenue {
+                    padding: 24px;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                .patient_list_row_left h3 {
+                    font-size: 18px;
+                }
+                .patient_list_row_left span {
+                    font-size: 18px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar open">
+            <div class="logo-details">
+                <div class="logo_name">
+                    <img src="images/logo.png" alt="" srcset="">
+                </div>
+                <div class="sidebar_btn" id="btn">
+                    <img src="images/sidebar_icon.svg" alt="" srcset="">
+                </div>
+            </div>
+            <ul class="nav-list">
+                <li class="active">
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">User</span>
+                    </a>
+                    <span class="tooltip">User</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">Messages</span>
+                    </a>
+                    <span class="tooltip">Messages</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">Analytics</span>
+                    </a>
+                    <span class="tooltip">Analytics</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">File Manager</span>
+                    </a>
+                    <span class="tooltip">Files</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">Order</span>
+                    </a>
+                    <span class="tooltip">Order</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">Saved</span>
+                    </a>
+                    <span class="tooltip">Saved</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_incon">
+                            <img src="images/dashboard_icon.png" alt="">
+                        </div>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tooltip">Setting</span>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section doctor_list_section user-management-list patient_list_sec">
+            <div class="topbar">
+                <div class="sidebar_btn" id="btn">
+                    <img src="images/sidebar_icon.svg" alt="" srcset="">
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="right-section">
+                    <!-- Notification -->
+                    <div class="icon-btn dropdown">
+                        <div class="bell_img">
+                            <img src="images/bell_icon.svg" alt="" srcset="">
+                        </div>
+                        <div class="dropdown-menu">
+                            <p>No new notifications</p>
+                        </div>
+                    </div>
+                    <!-- User -->
+                    <div class="user-menu dropdown">
+                        <img src="images/username_img.png" alt="User" class="avatar">
+                        <span class="username">Sachin</span>
+                        <span class="arrow">
+                            <img src="images/down_arrow.svg" alt="" srcset="">
+                        </span>
+                        <div class="dropdown-menu">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_section_box doctor-list">
+                <div class="doctor_list_top">
+                        <div class="doctor_list_left">
+                            <div class="doctor_list_contnet">
+                                <h1>Patient List</h1>
+                                <p>Comprehensive patient management and tracking system</p>
+                            </div>
+                        </div>
+
+
+                        <div class="top-cards_revenue">
+                            <div class="total_revenue">
+                                <div class="total_revenue_content">
+                                    <h3>Total Patients</h3>
+                                    <p>248</p>
+                                </div>
+                                <div class="total_revenue_img">
+                                    <img src="images/patient-list/patient-list1.png" alt="" srcset="">
+                                </div>
+                            </div>
+
+                            <div class="total_revenue">
+                                <div class="total_revenue_content">
+                                    <h3>Total New Patient</h3>
+                                    <p>186</p>
+                                </div>
+                                <div class="total_revenue_img">
+                                    <img src="images/patient-list/patient-list2.png" alt="" srcset="">
+                                </div>
+                            </div>
+
+                            <div class="total_revenue">
+                                <div class="total_revenue_content">
+                                    <h3>Total Patient This Month (Jan)</h3>
+                                    <p>23</p>
+                                </div>
+                                <div class="total_revenue_img">
+                                    <img src="images/patient-list/patient-list3.png" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="doctor_list_row">
+                        <div class="patient_list_row_left">
+                            <h3> Patient Records <span>(10 found)</span> </h3>
+                        </div>
+                        <div class="doctor_list_right">
+                            <div class="doctor_list_search">
+                                <div class="search_box">
+                                    <form action="/action_page.php">
+                                        <button type="submit">
+                                            <img src="images/search_icon.png" alt="" srcset="">
+                                        </button>
+                                        <input type="text" placeholder="Search by name, contact, city" name="search">
+                                    </form>
+                                </div>
+                                 <div class="doctor_list_dropdown">
+                                    <div class="card_top_select">
+                                        <div class="custom-select-wrapper">
+                                            <button class="custom-select-btn countryBtn countryBtn_top" id="countryBtn">
+                                                Sort By
+                                                <span class="caret"></span>
+                                            </button>
+                                        
+
+                                    <div class="dropdown-menu countryBtn_top_dropdown">
+                                        <span class="dropdown-item">Sort By 1 - 10</span>
+                                        <div class="dropdown-item selected">Sort By : A-Z</div>
+                                        <div class="dropdown-item">Sort By : Z-A</div>
+                                    </div>
+                                </div>
+                                        
+                                         
+                                    </div>
+                                </div>
+                                <div class="filter_box">
+                                    <button type="button" class="btn btn-primary">
+                                        <span class="filter_content">Filter</span>
+                                        <span class="filter_icon">
+                                            <img src="images/filter_icon.svg" alt="" srcset="">
+                                        </span>
+                                    </button>
+                                    <div class="filter_form">
+                                        <div class="filter_top">
+                                            <h3>Filter</h3>
+                                        </div>
+                                        <form>
+                                            <div class="input-box">
+                                                <select name="" id="">
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-box">
+                                                <select name="" id="">
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-box">
+                                                <select name="" id="">
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-box">
+                                                <select name="" id="">
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                    <option value="">Select Specialisation</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-btn">
+                                                <button class="apply_btn">Apply</button>
+                                                <button class="clear_btn">Clear</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="export_card export_card_btn">
+                                    <button>
+                                        <span class="export">Export</span>
+                                        <span class="export_icon">
+                                            <img src="images/export-icon.png" alt="" srcset="">
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="card card_button">
+                                    <button>
+                                        <span class="add_content">Add Patient</span>
+                                        <span class="add_icon">
+                                            <img src="images/add_icon.png" alt="" srcset="">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead class="sticky">
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Patient Name</th>
+                                <th>Gender</th>
+                                <th>State</th>
+                                <th>City</th>
+                                <th>Contact</th>
+                                <th>Last Visit Date</th>
+                                <th>No. of visits</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1921921929</td>
+                                <td>Sachin Chauhan Rajput</td>
+                                <td>Male</td>
+                                <td>Madhya Pardesh</td>
+                                <td>Indore</td>
+                                <td>0123456789</td>
+                                <td>Jan 13, 2024</td>
+                                <td>6</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="view_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/view-icon.svg" alt="">
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li class="edit_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/edit-icon.svg" alt=""> Edit
+                                                </a>
+                                            </li>
+                                            <li class="delete_btn">
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="images/delete-icon.svg" alt=""> Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pagination_box">
+                    <div class="pagination_left">
+                        <div class="pagination_content">Showing 1 to 5 of 20 results</div>
+                    </div>
+                    <div class="pagination_right">
+                        <div class="doctor_list_pagination">
+                            <div class="pagination">
+                                <a href="#">Previous</a>
+                                <a href="#">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    $(".filter_box .btn-primary").click(function() {
+      $(".filter_form").toggleClass("active");
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+   .clinic-details .contact-fome .doctors__header h2 {
+    margin-bottom: 0px;
+}
+ .clinic-details .doctor_list_top .card_button button {
+    display: inline-block;
+}
+ .doctors {
+      max-width: 100%;
+  
+    }
+
+    .doctors__header_row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .doctors__header h2 {
+      font-size: 28px;
+      color: #0056d2;
+      margin: 0;
+      margin-left: 16px;
+    }
+
+    .doctors__header p {
+          color: rgba(0, 0, 0, 0.80);
+      font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    }
+    .doctors__header{
+      margin-bottom: 56px;
+    }
+
+    .doctors__row {
+        display: flex;
+     gap: 24px 40px;
+    flex-wrap: wrap;
+    }
+
+    .doctors__item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .doctors__label {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #111;
+      font-size: 18px;
+    }
+
+    .doctors__value {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.60);
+      font-weight: 400;
+    }
+
+    .doctors__link a {
+      color: #0056d2;
+      text-decoration: none;
+    }
+
+    .doctors__link a:hover {
+      text-decoration: underline;
+    }
+    .doctors_header_img {
+    width: 27px;
+    height: 27px;
+}
+.doctors_header_img img {
+    width: 100%;
+}
+
+
+.cancel_btn {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.40);
+    background: #fff;
+    color: rgba(0, 0, 0, 0.80);
+    margin-right: 8px;
+}
+.cancel_btn:hover{
+    color: rgba(0, 0, 0, 0.80);
+     background: #fff;
+}
+
+    @media (max-width: 600px) {
+      .doctors__row {
+        grid-template-columns: 1fr;
+      }
+    }

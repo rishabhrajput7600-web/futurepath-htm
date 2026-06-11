@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Management List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="css/custom-style.css">
+ 
+  <title>Document</title>
+  <style>
+    .charts-wrapper {
+      display: flex;
+      flex-direction: row; /* vertical layout */
+      gap: 20px;
+      align-items: center;
+    }
+
+    .chart-card {
+      width: 25%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    }
+
+    .chart-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: #0A0A0A;
+      font-weight: 600;
+    }
+
+    .chart-legend {
+          display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    flex-direction: row;
+    font-weight: 500;
+    }
+
+    .legend-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    canvas {
+      width: 180px !important;
+      height: 180px !important;
+      margin: 0 auto;
+          margin-bottom: -54px;
+    }
+
+    .total-value {
+      position: relative;
+      top: -60px;
+      font-size: 29px;
+      font-weight: 600;
+      color: #000;
+    }
+    .total-content{
+      position: relative;
+      top: -60px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #000;
+    }
+
+
+
+
+
+ .appointments-wrapper{
+  margin-top: 44px;
+  width: 100%;
+
+ }
+     .appointments_row {
+      display: flex;
+      flex-direction: row;  
+      gap: 25px;
+      align-items: center;
+    }
+
+    .appointments-wrapper .chart-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 50%;
+       padding: 20px;
+    }
+
+   .appointments-wrapper h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .appointments-wrapper canvas {
+      width: 100% !important;
+      height: 280px !important;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section doctor_list_section user-management-list reports-and-analytics">
+    <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home_section_box doctor-list">
+      <!-- <div class="doctor_list_top">
+        <div class="doctor_list_row">
+          <div class="doctor_list_left">
+            <div class="doctor_list_contnet">
+              <h1>Reports & Analytics</h1>
+              <p>Manage Reports & Analytics</p>
+            </div>
+          </div>
+          <div class="doctor_list_right">
+            <div class="doctor_list_search">
+
+              <div class="export_card export_card_btn">
+                <button>
+                  <span class="export">Export</span>
+                  <span class="export_icon">
+                    <img src="images/export-icon.png" alt="" srcset="">
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+ 
+      <div class="reports-and-analytics">
+      <div class="charts-wrapper">
+    <!-- Chart 1 -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <span class="chart_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+  <path d="M11.4951 0.102539C12.1032 0.102563 12.7124 0.284974 13.2344 0.650391L21.5938 6.50195C22.4045 7.06948 22.8877 7.99766 22.8877 8.9873V19.8555C22.8874 21.53 21.5301 22.8874 19.8555 22.8877H3.13477C1.46007 22.8876 0.102792 21.5301 0.102539 19.8555V8.9873C0.102539 7.99766 0.584769 7.06948 1.39551 6.50195L9.75586 0.650391C10.2779 0.28498 10.887 0.102539 11.4951 0.102539ZM11.4951 1.98828C11.2645 1.98828 11.0345 2.05704 10.8369 2.19531L2.47754 8.04688C2.17086 8.26155 1.98828 8.61296 1.98828 8.9873V19.8555C1.98853 20.4888 2.50145 21.0018 3.13477 21.002H7.41699V17.7646C7.41718 16.0898 8.77535 14.7324 10.4502 14.7324H12.54C14.2149 14.7324 15.5731 16.0898 15.5732 17.7646V21.002H19.8555C20.4887 21.0017 21.0017 20.4887 21.002 19.8555V8.9873C21.002 8.61296 20.8193 8.26155 20.5127 8.04688L12.1533 2.19531C11.9557 2.05707 11.7257 1.9883 11.4951 1.98828ZM10.4502 16.6182C9.81672 16.6182 9.30292 17.1312 9.30273 17.7646V21.002H13.6875V17.7646C13.6873 17.1312 13.1735 16.6182 12.54 16.6182H10.4502ZM10.9727 6.37207H12.0176C12.2496 6.37211 12.4375 6.56088 12.4375 6.79297V8.46191H14.1074C14.3395 8.46191 14.5273 8.6507 14.5273 8.88281V9.92773C14.5272 10.1597 14.3394 10.3477 14.1074 10.3477H12.4375V12.0176C12.4375 12.2496 12.2496 12.4375 12.0176 12.4375H10.9727C10.7406 12.4375 10.5518 12.2496 10.5518 12.0176V10.3477H8.88281C8.65077 10.3477 8.46204 10.1597 8.46191 9.92773V8.88281C8.46191 8.65069 8.65069 8.46191 8.88281 8.46191H10.5518V6.79297C10.5518 6.56085 10.7406 6.37207 10.9727 6.37207Z" fill="#013A78" stroke="white" stroke-width="0.204401"/>
+</svg></span> Total Clinics</div>
+      <canvas id="chart1"></canvas>
+      <div class="total-content">Total</div>
+      <div class="total-value">120</div>
+      <div class="chart-legend">
+        <div><span class="legend-dot" style="background:#0252A9;"></span>Active: 100</div>
+        <div><span class="legend-dot" style="background:#d91a32;"></span>Inactive: 20</div>
+      </div>
+    </div>
+
+    <!-- Chart 2 -->
+    <div class="chart-card">
+      <div class="chart-header"> 
+        <span class="chart_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+  <path d="M15.3332 20.125V18.2083C15.3332 17.1917 14.9293 16.2166 14.2104 15.4978C13.4915 14.7789 12.5165 14.375 11.4998 14.375H5.74984C4.73317 14.375 3.75815 14.7789 3.03926 15.4978C2.32037 16.2166 1.9165 17.1917 1.9165 18.2083V20.125" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.3335 3C16.1555 3.2131 16.8835 3.69313 17.4032 4.36473C17.9229 5.03632 18.2049 5.86148 18.2049 6.71067C18.2049 7.55986 17.9229 8.38501 17.4032 9.05661C16.8835 9.72821 16.1555 10.2082 15.3335 10.4213" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21.0835 20.1254V18.2087C21.0829 17.3594 20.8002 16.5343 20.2798 15.8631C19.7594 15.1918 19.0309 14.7123 18.2085 14.5" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8.62484 10.5417C10.7419 10.5417 12.4582 8.82543 12.4582 6.70833C12.4582 4.59124 10.7419 2.875 8.62484 2.875C6.50775 2.875 4.7915 4.59124 4.7915 6.70833C4.7915 8.82543 6.50775 10.5417 8.62484 10.5417Z" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </span>
+         Total Doctors</div>
+      <canvas id="chart2"></canvas>
+      <div class="total-content">Total</div>
+      <div class="total-value">326</div>
+      <div class="chart-legend">
+        <div><span class="legend-dot" style="background:#0252A9;"></span>Active: 300</div>
+        <div><span class="legend-dot" style="background:#d91a32;"></span>Inactive: 26</div>
+      </div>
+    </div>
+
+    <!-- Chart 3 -->
+    <div class="chart-card">
+      <div class="chart-header">
+           <span class="chart_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+  <path d="M15.3335 10.5417L17.2502 12.4583L21.0835 8.625" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.3332 20.125V18.2083C15.3332 17.1917 14.9293 16.2166 14.2104 15.4978C13.4915 14.7789 12.5165 14.375 11.4998 14.375H5.74984C4.73317 14.375 3.75815 14.7789 3.03926 15.4978C2.32037 16.2166 1.9165 17.1917 1.9165 18.2083V20.125" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8.62484 10.5417C10.7419 10.5417 12.4582 8.82543 12.4582 6.70833C12.4582 4.59124 10.7419 2.875 8.62484 2.875C6.50775 2.875 4.7915 4.59124 4.7915 6.70833C4.7915 8.82543 6.50775 10.5417 8.62484 10.5417Z" stroke="#0252A9" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </span>
+         Total Patients</div>
+      <canvas id="chart3"></canvas>
+      <div class="total-content">Total</div>
+      <div class="total-value">1289</div>
+      <div class="chart-legend">
+        <div><span class="legend-dot" style="background:#0252A9;"></span>Active: 1200</div>
+        <div><span class="legend-dot" style="background:#d91a32;"></span>Inactive: 89</div>
+      </div>
+    </div>
+
+    <!-- Chart 4 -->
+    <div class="chart-card">
+      <div class="chart-header">
+            <span class="chart_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+  <path d="M7.64331 1.91406V5.73573" stroke="#0252A9" stroke-width="1.91083" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.2866 1.91406V5.73573" stroke="#0252A9" stroke-width="1.91083" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18.1529 3.82031H4.77704C3.72172 3.82031 2.86621 4.67582 2.86621 5.73115V19.107C2.86621 20.1623 3.72172 21.0178 4.77704 21.0178H18.1529C19.2082 21.0178 20.0637 20.1623 20.0637 19.107V5.73115C20.0637 4.67582 19.2082 3.82031 18.1529 3.82031Z" stroke="#0252A9" stroke-width="1.91083" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2.86621 9.55859H20.0637" stroke="#0252A9" stroke-width="1.91083" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </span>
+        Total Appointments</div>
+      <canvas id="chart4"></canvas>
+      <div class="total-content">Total</div>
+      <div class="total-value">2345</div>
+      <div class="chart-legend">
+        <div><span class="legend-dot" style="background:#00d7a9;"></span>Completed: 2300</div>
+        <div><span class="legend-dot" style="background:#d91a32;"></span>Cancelled: 45</div>
+      </div>
+    </div>
+  </div>
+
+   <div class="appointments-wrapper">
+    <div class="appointments_row ">
+   <!-- Chart 1 -->
+    <div class="chart-card">
+      <h3>Appointments Trend</h3>
+      <canvas id="appointmentsChart"></canvas>
+    </div>
+
+    <!-- Chart 2 -->
+    <div class="chart-card">
+      <h3>Revenue Generated</h3>
+      <canvas id="revenueChart"></canvas>
+    </div>
+    </div>
+ 
+
+  </div>
+       
+
+    </div>
+
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+
+    $(".filter_box .btn-primary").click(function() {
+      $(".filter_form").toggleClass("active");
+    });
+    
+     // Chart configs
+    const chartConfigs = [
+      { id: "chart1", data: [100, 20], colors: ["#0252A9", "#d91a32"] },
+      { id: "chart2", data: [300, 26], colors: ["#0252A9", "#d91a32"] },
+      { id: "chart3", data: [1200, 89], colors: ["#0252A9", "#d91a32"] },
+      { id: "chart4", data: [2300, 45], colors: ["#00d7a9", "#d91a32"] },
+    ];
+
+    chartConfigs.forEach(cfg => {
+      new Chart(document.getElementById(cfg.id), {
+        type: "doughnut",
+        data: {
+          datasets: [{
+            data: cfg.data,
+            backgroundColor: cfg.colors,
+            cutout: "75%",
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "rgba(0,0,0,0.85)",
+              bodyFont: { size: 12 },
+            }
+          }
+        }
+      });
+    });
+
+     // Appointments Trend Chart
+    new Chart(document.getElementById("appointmentsChart"), {
+      type: "line",
+      data: {
+        labels: ["08", "10", "12", "14", "16", "18", "20", "22"],
+        datasets: [
+          {
+            label: "Booked",
+            data: [60, 70, 85, 90, 92, 95, 97, 100],
+            borderColor: "#2563EB",
+            backgroundColor: "rgba(37, 99, 235, 0.1)",
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: "#2563EB",
+            pointRadius: 4
+          },
+          {
+            label: "Cancelled",
+            data: [0, 10, 25, 30, 25, 28, 35, 32],
+            borderColor: "#DC2626",
+            backgroundColor: "rgba(220, 38, 38, 0.1)",
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: "#DC2626",
+            pointRadius: 4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: { size: 12 },
+            callbacks: {
+              title: (context) => `Time: ${context[0].label}:00`,
+              label: (context) => {
+                if (context.dataset.label === "Booked") return `Booked: ${context.parsed.y}`;
+                if (context.dataset.label === "Cancelled") return `Cancelled: ${context.parsed.y}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: "#e5e7eb" },
+            ticks: { color: "#6b7280" }
+          },
+          y: {
+            grid: { color: "#e5e7eb" },
+            ticks: { color: "#6b7280" },
+            beginAtZero: true,
+            max: 120
+          }
+        }
+      }
+    });
+
+    // Revenue Chart
+    new Chart(document.getElementById("revenueChart"), {
+      type: "line",
+      data: {
+        labels: ["08", "10", "12", "14", "16", "18", "20", "22"],
+        datasets: [
+          {
+            label: "Revenue",
+            data: [25, 40, 55, 58, 60, 62, 65, 55],
+            borderColor: "#059669",
+            backgroundColor: "rgba(5,150,105,0.1)",
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: "#059669",
+            pointRadius: 4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "rgba(0,0,0,0.85)",
+            bodyFont: { size: 12 },
+            callbacks: {
+              title: (context) => `Time: ${context[0].label}:00`,
+              label: (context) => `Revenue: ₹${context.parsed.y}L`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: "#e5e7eb" },
+            ticks: { color: "#6b7280" }
+          },
+          y: {
+            grid: { color: "#e5e7eb" },
+            ticks: { color: "#6b7280" },
+            beginAtZero: true,
+            max: 80
+          }
+        }
+      }
+    });
+
+  </script>
+</body>
+
+</html>

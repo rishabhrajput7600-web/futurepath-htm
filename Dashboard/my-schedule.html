@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Schedule</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_list.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor_registration.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/management.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/clinic-details.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/doctor-profile.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/my_schedule.css" rel="stylesheet" type="text/css">
+  <title>Document</title>
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <div class="sidebar open">
+    <div class="logo-details">
+      <div class="logo_name">
+        <img src="images/logo.png" alt="" srcset="">
+      </div>
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="active">
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <li>
+        <a href="#">
+          <div class="sidebar_incon">
+            <img src="images/dashboard_icon.png" alt="">
+          </div>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section create-user-management my_schedule">
+    <div class="topbar">
+      <div class="sidebar_btn" id="btn">
+        <img src="images/sidebar_icon.svg" alt="" srcset="">
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="right-section">
+        <!-- Notification -->
+        <div class="icon-btn dropdown">
+          <div class="bell_img">
+            <img src="images/bell_icon.svg" alt="" srcset="">
+          </div>
+          <div class="dropdown-menu">
+            <p>No new notifications</p>
+          </div>
+        </div>
+        <!-- User -->
+        <div class="user-menu dropdown">
+          <img src="images/username_img.png" alt="User" class="avatar">
+          <span class="username">Sachin</span>
+          <span class="arrow">
+            <img src="images/down_arrow.svg" alt="" srcset="">
+          </span>
+          <div class="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="home_section_box schedule_section">
+  
+      <div class="schedule_box">
+        <div class="schedule_top">
+          <h1 class="fs-36">My Schedule</h1>
+          <div class="status_box">
+            <div class="status_list">Closed :</div>
+               <ul>
+            <li><span class="dot blue"></span>Today</li>
+            <li><span class="dot green"></span>Available</li>
+            <li><span class="dot yellow"></span>Half-day</li>
+            <li><span class="dot gray"></span>Limited Slots</li>
+            <li><span class="dot red"></span>Unavailable</li>
+            <li><span class="dot black"></span>Closed</li>
+          </ul>
+            </div>
+          </div>
+         </div>
+
+         <div class="schedule_row">
+          <div class="schedule_left">
+  <div class="calendar">
+    <header>
+      <div class="calendar_left">
+        <div id="monthyear"></div>
+      </div>
+      <div class="calendar_right">
+     <div class="calendar_btn">
+<button id="prev">
+    <img src="images/prev1.png" alt="" srcset="">
+ 
+</button>
+      
+      <button id="next">
+
+ <img src="images/next1.png" alt="" srcset="">
+      </button>
+          </div>
+      </div>
+     
+      
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+          <th>Sun</th>
+        </tr>
+      </thead>
+      <tbody id="calendarBody"></tbody>
+    </table>
+  </div>
+          </div>
+          <div class="schedule_right">
+            
+            <div class="availability_box">
+              <div class="availability_top">
+                <h2> Set Availability</h2>
+                <p><span>Wednesday</span>, Sep 24, 2025</p>
+                   </div>
+                <div class="availability_list">
+                  <ul>
+        <li class="availability_tab"><a href="javascript:void();" data-tag="availability1" class="activelink"><span class="availability_dot"></span> Full Day Available</a></li>
+        <li class="availability_tab"><a href="javascript:void();" data-tag="availability2"><span class="availability_dot yellow_dot"></span>Half Day</a></li>
+        <li class="availability_tab"><a href="javascript:void();" data-tag="availability3"><span class="availability_dot gray_dot"></span> Slot Block</a></li>
+        <li class="availability_tab"><a href="javascript:void();" data-tag="availability4"><span class="availability_dot red_dot"></span> Unavailable</a></li>
+    </ul>    
+
+        <div id="list_availability_box">
+         
+        <div class="list_availability" id="availability1">
+          <div class="list_availability_content">
+           
+            <h3 id="summaryDate"> <span class="date-icon_img"> <img src="images/date-icon.png" alt="" srcset=""></span> <b>Wednesday</b>, Sep 24, 2025</h3>
+            <span class="tag" id="summaryTag"> Full Day Available</span>
+            <p>Schedule: <b>09:00AM - 12:00PM</b></p>
+          <div class="save-btn_box">
+                              <div class="group-btn">
+                             <button class="save-btn cancel_btn">Cancel</button>
+                             <button class="save-btn">Save</button>
+                              </div>
+                          
+                          </div>
+          </div>
+        </div>
+           <div class="list_availability hide" id="availability2">
+          <div class="list_availability_content list_availability_content">
+           
+            <h3 id="summaryDate">Define your working half</h3>
+             <p>Choose either first half or second half for today’s availability</p>
+
+             <div class="list_availability_option">
+    <div class="option selected" id="firstHalf">
+      <div class="option_left">
+        <img src="images/watch.png" alt="" srcset="">
+      </div>
+     <div class="option_right">
+      <div class="option_right_content">
+        <div class="title">First Half</div>
+      <div class="time">09:00AM - 11:59AM</div>
+      </div>
+      <div class="option_right_img">
+<div class="checkmark">✔</div>
+      </div>
+       
+      
+     </div>
+    </div>
+
+    <div class="option" id="secondHalf">
+       <div class="option_left">
+        <img src="images/watch.png" alt="" srcset="">
+      </div>
+     <div class="option_right">
+      <div class="option_right_content">
+  <div class="title">Second Half</div>
+      <div class="time">04:00PM - 09:00PM</div>
+      </div>
+       <div class="option_right_img">
+          <div class="checkmark">✔</div>
+       </div>
+    
+    
+    </div>
+  </div>
+  </div>
+          <div class="save-btn_box">
+                              <div class="group-btn">
+                             <button class="save-btn cancel_btn">Cancel</button>
+                             <button class="save-btn">Save</button>
+                              </div>
+                          
+                          </div>
+          </div>
+        </div>
+           <div class="list_availability hide" id="availability3">
+            <div class="list_availability_content unavailable_box">
+  <div class="unavailable_top_content">
+            <h3>Select Unavailable Slots </h3>
+           </div>
+           <div class="unavailable_list">
+            <ul>
+              <li class="active">09:00AM - 09:30AM</li>
+              <li class="active">09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+              <li>09:00AM - 09:30AM</li>
+            </ul>
+           </div>
+               <div class="save-btn_box">
+                              <div class="group-btn">
+                             <button class="save-btn cancel_btn">Cancel</button>
+                             <button class="save-btn">Save</button>
+                              </div>
+                          
+                          </div>
+            </div>
+         
+        </div>
+         <div class="list_availability hide" id="availability4">
+          <div class="list_availability_content unavailable_content">
+           
+            <h3 id="summaryDate"> <span class="date-icon_img"> <img src="images/date-icon.png" alt="" srcset=""></span> <b>Friday</b>, Sep 26, 2025</h3>
+            <span class="tag" id="summaryTag">Unavailable (Day Off)</span>
+            <p> <b>09:00AM - 12:00PM</b></p>
+          <div class="save-btn_box">
+                              <div class="group-btn">
+                             <button class="save-btn cancel_btn">Cancel</button>
+                             <button class="save-btn">Save</button>
+                              </div>
+                          
+                          </div>
+          </div>
+        </div>
+        
+    </div> 
+                </div>
+           
+             
+            </div>
+
+          </div>
+         </div>
+     
+
+    </section>
+   
+    
+
+    </div>
+
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+
+      $(document).ready(function(){
+        $('.availability_tab a').click(function(){
+            $('.availability_tab a').removeClass('activelink');
+            $(this).addClass('activelink');
+            var tagid = $(this).data('tag');
+            $('.list_availability').removeClass('active').addClass('hide');
+            $('#'+tagid).addClass('active').removeClass('hide');
+        });
+    });
+
+
+    const monthyear = document.getElementById("monthyear");
+    const calendarBody = document.getElementById("calendarBody");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    let currentDate = new Date(2025, 8); // Default: September 2025
+    let selectedCell = null;
+
+    function renderCalendar() {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const startDay = (firstDay.getDay() + 6) % 7; // Monday as first day
+      const totalDays = lastDay.getDate();
+
+      monthyear.textContent = `${firstDay.toLocaleString('default', { month: 'long' })} ${year}`;
+      calendarBody.innerHTML = "";
+
+      let row = document.createElement("tr");
+
+      // Empty cells for days before month start
+      for (let i = 0; i < startDay; i++) {
+        const cell = document.createElement("td");
+        cell.classList.add("gray");
+        row.appendChild(cell);
+      }
+
+      // Fill all dates
+      for (let day = 1; day <= totalDays; day++) {
+        const cell = document.createElement("td");
+        const span = document.createElement("span");
+        span.textContent = day.toString().padStart(2, "0");
+        cell.appendChild(span);
+
+        // Sample underline colors
+        if (day === 25) cell.classList.add("yellow");
+        else if (day === 26) cell.classList.add("red");
+        else if (day === 12) cell.classList.add("black");
+        else if (day % 7 === 0) cell.classList.add("gray");
+        else cell.classList.add("green");
+
+        // Click for selection
+        cell.addEventListener("click", () => {
+          if (selectedCell) selectedCell.classList.remove("selected");
+          cell.classList.add("selected");
+          selectedCell = cell;
+        });
+
+        row.appendChild(cell);
+
+        // New row each week
+        if ((startDay + day) % 7 === 0) {
+          calendarBody.appendChild(row);
+          row = document.createElement("tr");
+        }
+      }
+
+      // Append last row if not complete
+      if (row.children.length > 0) calendarBody.appendChild(row);
+    }
+
+    prev.addEventListener("click", () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar();
+      selectedCell = null;
+    });
+
+    next.addEventListener("click", () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar();
+      selectedCell = null;
+    });
+
+    renderCalendar();
+
+//     $(document).ready(function(){
+//   $('.unavailable_list ul li').click(function(){
+//     $('.unavailable_list li').removeClass("active");
+//     $(this).addClass("active");
+// });
+// });
+
+  $(function(){
+      $('.unavailable_list ul li').on('click', function(){
+        $(this).addClass('active'); // class sirf add hogi, kabhi remove nahi
+      });
+    });
+  </script>
+
+</body>
+
+</html>

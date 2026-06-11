@@ -1,0 +1,138 @@
+.add-medicine-brk {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.add-medicine-upload h3 {
+    font-size: 18px;
+}
+
+
+.attach-doc-box {
+    width: 100%;
+    background-color: #E6EEF6;
+    border: 1px dashed rgba(0, 0, 0, 0.20);
+    padding: 34px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.attach-doc-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attach-doc-info i {
+    font-size: 20px;
+}
+
+.attach-doc-info a {
+    color: #0252A9;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.replace-btn {
+    border: 1px solid #0056b3;
+    background-color: #E6EEF6;
+    color: #0056b3;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.bottom-row {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-row a {
+    color: #0252A9;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.attach-doc-btn {
+    background-color: #0252A9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.upload-box {
+    width: 100%;
+    background-color: #E6EEF6;
+    border: 1px dashed rgba(0, 0, 0, 0.20);
+    padding: 34px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upload-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-info i {
+    font-size: 20px;
+}
+
+.upload-info a {
+    color: #0252A9;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.replace-btn {
+    border: 1px solid #0056b3;
+    background-color: #E6EEF6;
+    color: #0056b3;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.bottom-row {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-row a {
+    color: #0252A9;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.upload-btn {
+    background-color: #0252A9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}

@@ -1,0 +1,141 @@
+.plan-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        padding: 28px 24px;
+    }
+
+    .plan-header h1 {
+      color: #0252A9;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .plan-header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .edit-btn {
+      background-color: #0252A9;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .deactivate-btn {
+      background-color: #fff;
+      color: #C81212;
+      border: 1px solid #C81212;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .plan-subtitle {
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .section-title {
+      font-weight: 600;
+      padding: 0 24px;
+    }
+
+    .plan-info {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 20px;
+      padding: 0 24px;
+      padding-bottom: 24px;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+    }
+
+    .info-label {
+      font-weight: 600;
+    }
+
+    .info-value {
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .info-value.blue {
+      color: #0252A9;
+      font-weight: 600;
+    }
+
+    .badge {
+      background-color: #aeeeda;
+      color: #004d3e;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .basic_plan_inner .section-title {
+    color: #000;
+    font-size: 20px;
+}
+
+.basic_plan_inner .subscription-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.basic_plan_inner .section {
+    padding: 20px 25px;
+    border-top: 1px solid #f2f2f2;
+    max-width: 88%;
+}
+.basic_plan_inner .section h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 15px;
+}
+.basic_plan_inner .features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 90px;
+}
+.staff-limit,
+.support {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.features-grid .features-item,
+.staff-limit .features-item,
+.support .features-item {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-size: 18px;
+  gap: 10px;
+}
+
+
+    @media (max-width: 900px) {
+      .plan-info {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
